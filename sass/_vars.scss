@@ -82,7 +82,7 @@ $palm-end: 30.0625em; // 481px
 /*
  * Font-sizes in pixels.
  */
-$h1-size: ms(5); // .alpha
+$h1-size: ms(6); // .alpha
 $h2-size: ms(4); // .beta
 $h3-size: ms(3); // .gamma
 $h4-size: ms(2); // .delta
@@ -103,19 +103,13 @@ $link-interaction-color: #de0f00; // :hover, :active, :focus
 /*
  * Easier way to declare your font stacks.
  */
-$typeface: "pt-sans-1","pt-sans-2", sans-serif;
-$headline-font: "pt-sans-1","pt-sans-2", sans-serif;
+$typeface: "pt-sans-1","pt-sans-2", arial, sans-serif;
+$headline-font: "pt-sans-1","pt-sans-2", arial, sans-serif;
 $headline-weight: normal;
 
 /*
  * Color variables - You should change these!
  */
-$primary-color: blue;
-$secondary-color: purple;
 $text-color: #333;
-$warning-color: orange;
-$error-color: red;
-$success-color: green;
-$highlight-color: yellow;
 $selection-bg-color: #edb951;
 $selection-text-color: $text-color;
