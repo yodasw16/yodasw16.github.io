@@ -1,0 +1,33 @@
+html {
+    background-color:#eeffff;
+}
+
+body {
+    padding: 0 .5em;
+}
+
+.header[role=main] {
+
+}
+
+.logo {
+    width: 6em;
+    margin: 0 auto;
+    @include rhythm(1,0,0,1);
+    display: block;
+}
+
+.hearts:after {
+    content: '❤ ❤ ❤';
+    display: block;
+    text-align: center;
+    color: #de4e43;
+    @include leader();
+}
+
+@media screen and (min-width: $palm-end) {
+    main {
+        max-width: 35em;
+        margin: 0 auto;
+    }
+}
