@@ -318,6 +318,7 @@ module.exports = function (grunt) {
       },
       deploy: {
         cmd: 'git subtree push --prefix .dist ' + gh_upstream + ' ' + gh_deploy
+        // git push origin `git subtree split --prefix .dist master`:master --force
       },
       export: {
         cmd: function(path) {

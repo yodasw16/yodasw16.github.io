@@ -5,7 +5,8 @@
   },
   "export": {
     "path": "export",
-    "assetPrefix": "yodasw16.github.io"
+    "assetPrefix": "",
+    "distPath": ""
   },
   "compass": {
     "debugInfo": false,
