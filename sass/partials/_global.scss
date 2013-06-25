@@ -13,12 +13,16 @@ body {
     display: block;
 }
 
+.hearts {
+    @include trailer(.5);
+}
+
 .hearts:after {
     content: '❤ ❤ ❤';
     display: block;
     text-align: center;
     color: #de4e43;
-    @include leader();
+    @include leader(.5);
 }
 
 @media screen and (min-width: $palm-end) {

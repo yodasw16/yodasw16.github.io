@@ -135,7 +135,7 @@ module.exports = function (grunt) {
           userConfig: userConfig,
           environment: 'prod',
           development: false,
-          assets: '/' + assetPrefix
+          assets: assetPrefix
 
         }
       }
