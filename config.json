@@ -5,8 +5,7 @@
   },
   "export": {
     "path": "export",
-    "assetPrefix": "",
-    "distPath": ""
+    "assetPrefix": ""
   },
   "compass": {
     "debugInfo": false,
