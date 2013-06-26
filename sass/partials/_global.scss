@@ -4,6 +4,8 @@ html {
 
 body {
     padding: 0 .5em;
+    max-width: 35em;
+    margin: 0 auto;
 }
 
 .logo {
@@ -23,11 +25,4 @@ body {
     text-align: center;
     color: #de4e43;
     @include leader(.5);
-}
-
-@media screen and (min-width: $palm-end) {
-    main {
-        max-width: 35em;
-        margin: 0 auto;
-    }
 }
