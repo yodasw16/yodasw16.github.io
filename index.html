@@ -1,0 +1,57 @@
+---
+layout: default
+title: Web UI Developer
+---
+
+<h1>Hi, I’m Dave!</h1>
+<p class="hearts">My name is <a href="https://twitter.com/yodasw16">Dave Gillhespy</a>. I am a <i>Senior Web UI Developer</i> at Quicken Loans, but my made up title doesn't really matter. What matters is that I absolutely love HTML and CSS. It's way more than just a job for me. I am enamored by responsive web design, semantic markup, and progressive enhancement. I often dabble in javascript and try to be a designer, but HTML and CSS are my true loves. Want to <a href="/about" title="More about Dave Gillhespy">know more</a>?</p>
+
+<h2>OMG, a blog!</h2>
+<div class="posts">
+    <ul class="list--bare">
+{% for post in paginator.posts %}
+        <li>
+            <header class="header--article">
+                <h2 class="mbn"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <small class="post-meta">Posted on <i data="icon-calender"></i> <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: '%B %d, %Y' }}</time></small>
+          </header>
+          {{ post.excerpt | truncatewords: 100 }}
+          <p><small><a href="{{ post.url }}">Read More</a></small></p>
+        </li>
+{% endfor %}
+    </ul>
+</div>
+
+{% if paginator.posts == > 5 %}
+<ol class="nav--pagination">
+{% if paginator.previous_page %}
+    {% if paginator.previous_page == 1 %}
+    <li class="nav--pagination__prev"><a href="/">Prev</a></li>
+    {% else %}
+    <li class="nav--pagination__prev"><a href="/page{{ paginator.previous_page }}">Prev</a></li>
+    {% endif %}
+    {% else %}
+    <li class="nav--pagination__prev"><span class="disabled">Prev</span></li>
+{% endif %}
+
+{% if paginator.page == 1 %}
+    <li class="current">1</li>
+    {% else %}
+    <li><a href="/">1</a></li>
+{% endif %}
+
+{% for count in (2..paginator.total_pages) %}
+{% if count == paginator.page %}
+    <li class="current">{{ count }}</li>
+    {% else %}
+    <li><a href="/page{{ count }}">{{ count }}</a></li>
+{% endif %}
+{% endfor %}
+
+{% if paginator.next_page %}
+    <li class="nav--pagination__next"><a href="/page{{ paginator.next_page }}">Next</a></li>
+    {% else %}
+    <li class="nav--pagination__next">Next</li>
+{% endif %}
+</ol>
+{% endif %}

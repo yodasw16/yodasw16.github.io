@@ -1,0 +1,5 @@
+name: davidgillhespy.com
+markdown: redcarpet
+pygments: true
+paginate: 5
+exclude: [sass, node_modules, Gemfile, Gemfile.lock, Gruntfile.js, package.json]
