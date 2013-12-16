@@ -71,8 +71,10 @@ body {
     @include adjust-font-size-to(ms(1));
 }
 
-@include breakpoint($palm-end) {
-    main {
+main {
+    @include force-wrap();
+
+    @include breakpoint($palm-end) {
         max-width: 32em;
         margin: 0 auto;
     }
