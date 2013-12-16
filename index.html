@@ -15,14 +15,14 @@ title: Web UI Developer
                 <h2 class="mbn"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 <small class="post-meta">Posted on <i data="icon-calender"></i> <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: '%B %d, %Y' }}</time></small>
           </header>
-          {{ post.excerpt | truncatewords: 100 }}
+          {{ post.excerpt | truncatewords: 50 }}
           <p><small><a href="{{ post.url }}">Read More</a></small></p>
         </li>
 {% endfor %}
     </ul>
 </div>
 
-{% if paginator.posts == > 5 %}
+{% if paginator.posts %}
 <ol class="nav--pagination">
 {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
