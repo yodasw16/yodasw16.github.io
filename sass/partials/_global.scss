@@ -72,7 +72,8 @@ body {
 }
 
 main {
-    @include force-wrap();
+    word-wrap: break-all;
+    word-wrap: break-word;
 
     @include breakpoint($palm-end) {
         max-width: 32em;
