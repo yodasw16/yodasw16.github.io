@@ -1,4 +1,6 @@
 name: davidgillhespy.com
+description: "The blog of Dave Gillhespy: web developer and pretty awesome guy"
+url: http://davidgillhespy.com
 markdown: redcarpet
 pygments: true
 paginate: 5
