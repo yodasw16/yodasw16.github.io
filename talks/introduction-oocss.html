@@ -1,0 +1,139 @@
+---
+layout: slides
+title:  "Talks: Introduction to OOCSS"
+---
+<section>
+    <h1>Introduction to OOCSS</h1>
+</section>
+
+<section>
+    <h2>Why do we need OOCSS?</h2>
+    <p>CSS is easy, right?</p>
+</section>
+
+<section class="stack">
+    <section>
+        <h2>What are Objects in OOCSS?</h2>
+    </section>
+    <section>
+        <h2>Content Objects</h2>
+        <ul>
+            <li class="fragment">Headings</li>
+            <li class="fragment">Lists</li>
+            <li class="fragment">Buttons</li>
+            <li class="fragment">Media Blocks</li>
+        </ul>
+    </section>
+    <section>
+        <h2>The Media Object</h2>
+        <img src="http://i.imgur.com/mwooE.png">
+        <pre class="fragment"><code>
+    &lt;div class="media"&gt;
+        &lt;span class="img icon pdf"&gt;&lt;/span&gt;
+        &lt;div class="modBody"&gt;Hey I'm a pdf!&lt;/div&gt;
+    &lt;/div&gt;
+        </code></pre>
+        <pre class="fragment"><code>
+    .media .img {
+        float:left;
+        margin-right:10%;
+    }
+
+    .icon { background:url('/images/icons.png') 0 0 no-repeat; }
+
+    .icon.pdf {
+        background-position:0 -202px;
+        height:36px;
+        width:34px;
+    }
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <h2>The Component Library</h2>
+    <a href="https://www.myql.com/component-library">MyQL Component Library</a>
+</section>
+
+<section class="stack">
+    <section>
+        <h2>2 Main Principles</h2>
+        <ol>
+            <li class="fragment">Separate Content from Container</li>
+            <li class="fragment">Separate Structure from Style</li>
+        </ol>
+    </section>
+    <section>
+        <h2>Separate Content From Container</h2>
+        <pre><code>
+    .categories h3 {
+        some css
+    }
+        </code></pre>
+    </section>
+    <section>
+        <h2>Separate Content From Container</h2>
+        <h3>Location Dependent!</h3>
+        <pre><code>
+    .categories h3 {
+        some css
+    }
+        </code></pre>
+        <h3>Extend instead!</h3>
+        <pre><code>
+    .category {
+        some css
+    }
+        </code></pre>
+    </section>
+    <section>
+        <h2>Separate Structure from Skin</h2>
+        <pre><code>
+    &lt;div class="data"&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Money&lt;/th&gt;
+                &lt;th&gt;Text&lt;/th&gt;
+                &lt;th&gt;Text&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;$10.00&lt;/td&gt;
+                &lt;td&gt;Some Text&lt;/td&gt;
+                &lt;td&gt;Some Text&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+        </code></pre>
+    </section>
+    <section>
+        <h2>Separate Structure from Skin</h2>
+        <pre><code>
+    &lt;div class="data spec"&gt;
+        &lt;table&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Money&lt;/th&gt;
+                &lt;th&gt;Text&lt;/th&gt;
+                &lt;th&gt;Text&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;$10.00&lt;/td&gt;
+                &lt;td&gt;Some Text&lt;/td&gt;
+                &lt;td&gt;Some Text&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <h2>Helpful Tips</h2>
+    <ul>
+        <li class="fragment">Avoid descendent selectors (.myModule p {...})</li>
+        <li class="fragment">Avoid compound selectors (div.category {...})</li>
+        <li class="fragment">Avoid !important !!!</li>
+        <li class="fragment">Use percentages</li>
+        <li class="fragment">Rely on the component library</li>
+        <li class="fragment">Try not to write any CSS if you can</li>
+    </ul>
+</section>

@@ -60,7 +60,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  breakpoint
+  breakpoint (~> 2.0.7)
   compass (~> 0.12.2)
   jekyll
   modular-scale

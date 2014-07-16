@@ -24,6 +24,7 @@ module.exports = function(grunt) {
                     force: true,
                     outputStyle: 'compressed',
                     relativeAssets: true,
+                    bundleExec: true,
                     require: ['modular-scale', 'breakpoint'],
                 },
             },
