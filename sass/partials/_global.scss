@@ -75,6 +75,13 @@ body {
     @include adjust-font-size-to(ms(1));
 }
 
+.devtroit {
+    margin: 0 auto;
+    @include trailer;
+    width: 90px;
+    display: block;
+}
+
 main {
     word-wrap: break-all;
     word-wrap: break-word;
