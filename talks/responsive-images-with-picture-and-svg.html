@@ -1,0 +1,97 @@
+---
+layout: slides
+title:  "Talks: Responsive Images with <picture> and SVG"
+---
+<section>
+    <h1>Responsive Images</h1>
+    <h2>with &lt;picture&gt; and SVG</h2>
+</section>
+
+<section>
+    <h2>We are getting fat!</h2>
+    <img src="/img/talks/responsive-images/fat.jpg">
+
+    <aside class="notes">
+        well, not this kind of fat
+    </aside>
+</section>
+
+<section>
+    <h2>Our web pages are getting huge!</h2>
+    <ul>
+        <li class="fragment">Average webpage weight is 1.8mb</li>
+        <li class="fragment">Up ~17% from last year and ~44% since 2012</li>
+        <li class="fragment">1.1mb of this is images<br>
+            <img style="margin: 10px auto; display: block" width="500" src="/img/talks/responsive-images/avg-bytes.png">
+            <cite class="cite">- httparchive.org</cite>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>This isn't us though, right?</h2>
+    <h4 class="fragment">Well...</h4>
+
+    <aside class="notes">
+        Our sites aren't can't be that big, right?
+    </aside>
+</section>
+
+<section>
+    <h2>Quicken Loans</h2>
+    <div class="fragment">
+        <img width="250" src="/img/talks/responsive-images/ql-bytes.png">
+        <p>&gt; 2mb</p>
+    </div>
+    <div class="fragment">
+        <img width="350" src="/img/talks/responsive-images/ql-img-weight.png">
+        <p>&gt; 1mb</p>
+        <cite class="cite">- webpagetest.org</cite>
+    </div>
+
+    <aside class="notes">
+        Let's talk about quickenloans.com. I don't want to pick on the venture folks here, but ql.com is our biggest site and has the most room for improvement, so it makes the best example.
+    </aside>
+</section>
+
+<section>
+    <h2>Agent Insight</h2>
+    <div class="fragment">
+        <div style="width: 45%; float:left">
+            <img width="250" src="/img/talks/responsive-images/ai-bytes-large.png">
+            <p>~2.5mb</p>
+        </div>
+        <div style="width: 45%; float:right">
+            <img width="250" src="/img/talks/responsive-images/ai-bytes-small.png">
+            <p>~2.2mb</p>
+        </div>
+    </div>
+    <div class="fragment" style="clear: left;">
+        <div style="width: 45%; float:left">
+            <img width="250" src="/img/talks/responsive-images/ai-img-weight-large.png">
+            <p>&gt; 1.5mb</p>
+        </div>
+        <div style="width: 45%; float:right">
+            <img width="250" src="/img/talks/responsive-images/ai-img-weight-small.png">
+            <p>&gt; 1.5mb</p>
+        </div>
+        <cite class="cite" style="clear: left;">- webpagetest.org</cite>
+    </div>
+
+    <aside class="notes">
+        Probably a better example is Agent Insight, which is a responsive site witha  decent amount of images being used.
+    </aside>
+</section>
+
+<section>
+    <h2>This is a <i><u>real</u></i> problem</h2>
+    <div class="fragment">
+        <h3>We can fix it!</h3>
+        <img width="500" src="/img/talks/responsive-images/hit-with-knowledge.gif">
+    </div>
+</section>
+
+<section>
+    <h2>What are we doing wrong?</h2>
+
+</section>
