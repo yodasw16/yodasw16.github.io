@@ -1,13 +1,15 @@
 {% include header.html %}
-<article>
+<article class="h-entry">
     <header class="header--article">
-        <h1 class="mbn">{{ page.title }}</h1>
-        <small class="post-meta">Posted on <i data="icon-calender"></i> <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ page.date | date: '%B %d, %Y' }}</time></small>
+        <h1 class="mbn p-name">{{ page.title }}</h1>
+        <small class="post-meta">Posted by <span class="p-author h-card">dave</span> on <span data="icon-calender"></span> <time class="dt-published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ page.date | date: '%B %d, %Y' }}</time></small>
     </header>
-{{ content }}
+    <div class="e-content">
+        {{ content }}
+    </div>
     <footer>
-        <h2 class="epsilon"><i data="icon-messages"></i> Have something to say?</h2>
-        <p><a href="http://twitter.com/yodasw16">@reply</a> me on twitter and let's chat!</p>
+        <h2 class="epsilon"><span data="icon-messages"></span> Have something to say?</h2>
+        <p><a rel="me" href="http://twitter.com/yodasw16">@reply</a> me on twitter and let's chat!</p>
     </footer>
 </article>
 {% include footer.html %}

@@ -4,18 +4,20 @@ title: Web UI Developer
 ---
 
 <h1>Hi, I’m Dave!</h1>
-<p class="hearts">My name is <a href="https://twitter.com/yodasw16">Dave Gillhespy</a>. I am a <i>Senior Web UI Developer</i> at Quicken Loans, but my made up title doesn't really matter. What matters is that I absolutely love HTML and CSS. It's way more than just a job for me. I am enamored by responsive web design, semantic markup, and progressive enhancement. I often dabble in javascript and try to be a designer, but HTML and CSS are my true loves. Want to <a href="/about" title="More about Dave Gillhespy">know more</a>?</p>
+<p class="hearts">My name is <a rel="me" href="https://twitter.com/yodasw16">Dave Gillhespy</a>. I am a <i>Senior Web UI Developer</i> at Quicken Loans, but my made up title doesn't really matter. What matters is that I absolutely love HTML and CSS. It's way more than just a job for me. I am enamored by responsive web design, semantic markup, and progressive enhancement. I often dabble in javascript and try to be a designer, but HTML and CSS are my true loves. Want to <a href="/about" title="More about Dave Gillhespy">know more</a>?</p>
 
 <h2>OMG, a blog!</h2>
 <div class="posts">
     <ul class="list--bare">
 {% for post in paginator.posts %}
-        <li>
+        <li class="h-entry">
             <header class="header--article">
-                <h2 class="mbn"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <small class="post-meta">Posted on <i data="icon-calender"></i> <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: '%B %d, %Y' }}</time></small>
+                <h2 class="mbn p-name"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <small class="post-meta">Posted by <span class="p-author h-card">dave</span> on <span data="icon-calender"></span> <time class="dt-published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: '%B %d, %Y' }}</time></small>
           </header>
+          <div class="e-content">
           {{ post.excerpt | truncatewords: 50 }}
+          </div>
           <p><small><a href="{{ post.url }}">Read More</a></small></p>
         </li>
 {% endfor %}
