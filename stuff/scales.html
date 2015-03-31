@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Scales Pattern Library</title>
+<meta name="viewport" content="initial-scale=1,width=device-width">
+<link rel="stylesheet" href="/stuff/scales.css">
+</head>
+<body>
+    <header role="banner">
+        <h1>Scales Pattern Library</h1>
+
+        <nav role="navigation">
+            <ul class="nav--main">
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#lists">Base Lists</a></li>
+                <li><a href="#blockquotes">Blockquotes</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#box">Box</a></li>
+                <li><a href="#horizontal-list">Horizontal List</a></li>
+                <li><a href="#vertical-list">Vertical List</a></li>
+                <li><a href="#flag">Flag</a></li>
+                <li><a href="#media">Media Object</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#split">Split</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#multi-col-list">Multi Column List</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main role="main">
+
+            <section id="typography">
+                <header>
+                    <h2>Typography</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Headings</h3>
+                    <h1>This is an H1</h1>
+                    <h2>This is an H2</h2>
+                    <h3>This is an H3</h3>
+                    <h4>This is an H4</h4>
+                    <h5>This is an H5</h5>
+                    <h6>This is an H6</h6>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;h1&gt;This is an H1&lt;/h1&gt;
+&lt;h2&gt;This is an H2&lt;/h2&gt;
+&lt;h3&gt;This is an H3&lt;/h3&gt;
+&lt;h4&gt;This is an H4&lt;/h4&gt;
+&lt;h5&gt;This is an H5&lt;/h5&gt;
+&lt;h6&gt;This is an H6&lt;/h6&gt;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Paragraphs</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.&lt;/p&gt;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Lede Paragraphs</h3>
+                    <p class="lede">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.</p>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;p class=&quot;lede&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida urna quis nulla ultrices, sed efficitur risus elementum. Vivamus semper ex a lorem sodales, rhoncus rhoncus augue cursus. Sed vestibulum felis vel euismod aliquet. Suspendisse sit amet euismod nibh, eget fermentum arcu. Aliquam lacinia, sem eu ultricies auctor, velit nunc commodo sapien, pharetra maximus augue dui eget dui.&lt;/p&gt;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Code Blocks</h3>
+        <pre><code>
+&lt;h1&gt;This is an H1&lt;/h1&gt;
+&lt;h2&gt;This is an H2&lt;/h2&gt;
+&lt;h3&gt;This is an H3&lt;/h3&gt;
+&lt;h4&gt;This is an H4&lt;/h4&gt;
+&lt;h5&gt;This is an H5&lt;/h5&gt;
+&lt;h6&gt;This is an H6&lt;/h6&gt;
+        </code></pre>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;pre&gt;&lt;code&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="lists">
+                <header>
+                    <h2>Base Lists</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Bare List</h3>
+                    <ul class="list--bare">
+                         <li>Scales</li>
+                         <li>Patterns</li>
+                         <li>Lists</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;ul class=&quot;list--bare&quot;&gt;
+    &lt;li&gt;Scales&lt;/li&gt;
+    &lt;li&gt;Patterns&lt;/li&gt;
+    &lt;li&gt;Lists&lt;/li&gt;
+&lt;/ul&gt;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="blockquotes">
+                <header>
+                    <h2>Blockquotes</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default blockquote</h3>
+                    <figure>
+                        <blockquote class="blockquote">
+                            <p class="blockquote__quote">For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring.</p>
+                        </blockquote>
+                        <figcaption class="blockquote__source">Carl Sagan, <cite>The Demon-Haunted World</cite></figcaption>
+                    </figure>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;figure&gt;
+    &lt;blockquote class=&quot;blockquote&quot;&gt;
+        &lt;p class=&quot;blockquote__quote&quot;&gt;For me, it is far better to grasp the Universe as it really is than to persist in delusion, however satisfying and reassuring.&lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption class=&quot;blockquote__source&quot;&gt;Carl Sagan, &lt;cite&gt;The Demon-Haunted World&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="forms">
+                <header>
+                    <h2>Forms</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default stacked form</h3>
+                    <form>
+                        <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+                        <input class="text-input" id="account" type="num" value="123456789" readonly>
+
+                        <label for="email">Email</label>
+                        <input class="text-input" id="email" type="email" placeholder="Email">
+                        <span class="helper-text">Enter your email address</span>
+
+                        <label for="password">Password</label>
+                        <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option>Female</option>
+                            <option>Male</option>
+                            <option>Other</option>
+                        </select>
+
+                        <label>Introduce yourself</label>
+                        <textarea></textarea>
+
+                        <label for="newsletter">
+                            <input id="newsletter" type="checkbox"> Send me the newsletter
+                        </label>
+
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&lt;form&gt;
+    &lt;label for=&quot;account&quot;&gt;Account #&lt;small class=&quot;form-label--additional&quot;&gt;(Cannot Change)&lt;/small&gt;&lt;/label&gt;
+    &lt;input class=&quot;text-input&quot; id=&quot;account&quot; type=&quot;num&quot; value=&quot;123456789&quot; readonly&gt;
+
+    &lt;label for=&quot;email&quot;&gt;Email&lt;/label&gt;
+    &lt;input class=&quot;text-input&quot; id=&quot;email&quot; type=&quot;email&quot; placeholder=&quot;Email&quot;&gt;
+    &lt;span class=&quot;helper-text&quot;&gt;Enter your email address&lt;/span&gt;
+
+    &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+    &lt;input class=&quot;text-input&quot; id=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot; disabled&gt;
+
+    &lt;label for=&quot;gender&quot;&gt;Gender&lt;/label&gt;
+    &lt;select id=&quot;gender&quot;&gt;
+        &lt;option&gt;Female&lt;/option&gt;
+        &lt;option&gt;Male&lt;/option&gt;
+        &lt;option&gt;Other&lt;/option&gt;
+    &lt;/select&gt;
+
+    &lt;label&gt;Introduce yourself&lt;/label&gt;
+    &lt;textarea&gt;&lt;/textarea&gt;
+
+    &lt;label for=&quot;newsletter&quot;&gt;
+        &lt;input id=&quot;newsletter&quot; type=&quot;checkbox&quot;&gt; Send me the newsletter
+    &lt;/label&gt;
+
+    &lt;button type=&quot;submit&quot; class=&quot;btn&quot;&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Using an unordered list</h3>
+                    <form>
+                        <ul class="form--list">
+                            <li class="input-container">
+                                <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+                                <input class="text-input" id="account" type="num" value="123456789" readonly>
+                            </li>
+                            <li class="input-container">
+                                <label for="email">Email</label>
+                                <input class="text-input" id="email" type="email" placeholder="Email">
+                                <span class="helper-text">Enter your email address</span>
+                            </li>
+                            <li class="input-container">
+                                <label for="password">Password</label>
+                                <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+                            </li>
+                            <li class="input-container">
+                                <label for="gender">Gender</label>
+                                <select id="gender">
+                                    <option>Female</option>
+                                    <option>Male</option>
+                                    <option>Other</option>
+                                </select>
+                            </li>
+                            <li class="input-container">
+                                <label>Introduce yourself</label>
+                                <textarea></textarea>
+                            </li>
+                            </li>
+                            <li class="input-container">
+                                <label for="newsletter">
+                                    <input id="newsletter" type="checkbox"> Send me the newsletter
+                                </label>
+                            </li>
+                        </ul>
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;form&#x3E;
+    &#x3C;ul class=&#x22;form--list&#x22;&#x3E;
+        &#x3C;li class=&#x22;input-container&#x22;&#x3E;
+            &#x3C;label for=&#x22;account&#x22;&#x3E;Account #&#x3C;small class=&#x22;form-label--additional&#x22;&#x3E;(Cannot Change)&#x3C;/small&#x3E;&#x3C;/label&#x3E;
+            &#x3C;input class=&#x22;text-input&#x22; id=&#x22;account&#x22; type=&#x22;num&#x22; value=&#x22;123456789&#x22; readonly&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;input-container&#x22;&#x3E;
+            &#x3C;label for=&#x22;email&#x22;&#x3E;Email&#x3C;/label&#x3E;
+            &#x3C;input class=&#x22;text-input&#x22; id=&#x22;email&#x22; type=&#x22;email&#x22; placeholder=&#x22;Email&#x22;&#x3E;
+            &#x3C;span class=&#x22;helper-text&#x22;&#x3E;Enter your email address&#x3C;/span&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;input-container&#x22;&#x3E;
+            &#x3C;label for=&#x22;password&#x22;&#x3E;Password&#x3C;/label&#x3E;
+            &#x3C;input class=&#x22;text-input&#x22; id=&#x22;password&#x22; type=&#x22;password&#x22; placeholder=&#x22;Password&#x22; disabled&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;input-container&#x22;&#x3E;
+            &#x3C;label for=&#x22;gender&#x22;&#x3E;Gender&#x3C;/label&#x3E;
+            &#x3C;select id=&#x22;gender&#x22;&#x3E;
+                &#x3C;option&#x3E;Female&#x3C;/option&#x3E;
+                &#x3C;option&#x3E;Male&#x3C;/option&#x3E;
+                &#x3C;option&#x3E;Other&#x3C;/option&#x3E;
+            &#x3C;/select&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;input-container&#x22;&#x3E;
+            &#x3C;label&#x3E;Introduce yourself&#x3C;/label&#x3E;
+            &#x3C;textarea&#x3E;&#x3C;/textarea&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;input-container&#x22;&#x3E;
+            &#x3C;label for=&#x22;newsletter&#x22;&#x3E;
+                &#x3C;input id=&#x22;newsletter&#x22; type=&#x22;checkbox&#x22;&#x3E; Send me the newsletter
+            &#x3C;/label&#x3E;
+        &#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+    &#x3C;button type=&#x22;submit&#x22; class=&#x22;btn&#x22;&#x3E;Sign in&#x3C;/button&#x3E;
+&#x3C;/form&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Inline form</h3>
+                    <form class="form--inline">
+                        <label for="account">Account #<small class="form-label--additional">(Cannot Change)</small></label>
+                        <input class="text-input" id="account" type="num" value="123456789" readonly>
+
+                        <label for="email">Email</label>
+                        <input class="text-input" id="email" type="email" placeholder="Email">
+
+                        <label for="password">Password</label>
+                        <input class="text-input" id="password" type="password" placeholder="Password" disabled>
+
+                        <label for="gender">Gender</label>
+                        <select id="gender">
+                            <option>Female</option>
+                            <option>Male</option>
+                            <option>Other</option>
+                        </select>
+
+                        <label>Introduce yourself</label>
+                        <textarea></textarea>
+
+                        <label for="newsletter">
+                            <input id="newsletter" type="checkbox"> Send me the newsletter
+                        </label>
+
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;form class=&#x22;form--inline&#x22;&#x3E;
+    &#x3C;label for=&#x22;account&#x22;&#x3E;Account #&#x3C;small class=&#x22;form-label--additional&#x22;&#x3E;(Cannot Change)&#x3C;/small&#x3E;&#x3C;/label&#x3E;
+    &#x3C;input class=&#x22;text-input&#x22; id=&#x22;account&#x22; type=&#x22;num&#x22; value=&#x22;123456789&#x22; readonly&#x3E;
+
+    &#x3C;label for=&#x22;email&#x22;&#x3E;Email&#x3C;/label&#x3E;
+    &#x3C;input class=&#x22;text-input&#x22; id=&#x22;email&#x22; type=&#x22;email&#x22; placeholder=&#x22;Email&#x22;&#x3E;
+
+    &#x3C;label for=&#x22;password&#x22;&#x3E;Password&#x3C;/label&#x3E;
+    &#x3C;input class=&#x22;text-input&#x22; id=&#x22;password&#x22; type=&#x22;password&#x22; placeholder=&#x22;Password&#x22; disabled&#x3E;
+
+    &#x3C;label for=&#x22;gender&#x22;&#x3E;Gender&#x3C;/label&#x3E;
+    &#x3C;select id=&#x22;gender&#x22;&#x3E;
+        &#x3C;option&#x3E;Female&#x3C;/option&#x3E;
+        &#x3C;option&#x3E;Male&#x3C;/option&#x3E;
+        &#x3C;option&#x3E;Other&#x3C;/option&#x3E;
+    &#x3C;/select&#x3E;
+
+    &#x3C;label&#x3E;Introduce yourself&#x3C;/label&#x3E;
+    &#x3C;textarea&#x3E;&#x3C;/textarea&#x3E;
+
+    &#x3C;label for=&#x22;newsletter&#x22;&#x3E;
+        &#x3C;input id=&#x22;newsletter&#x22; type=&#x22;checkbox&#x22;&#x3E; Send me the newsletter
+    &#x3C;/label&#x3E;
+
+    &#x3C;button type=&#x22;submit&#x22; class=&#x22;btn&#x22;&#x3E;Sign in&#x3C;/button&#x3E;
+&#x3C;/form&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="tables">
+                <header>
+                    <h2>Tables</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default styles</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table&#x3E;
+    &#x3C;thead&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;th&#x3E;Lorem&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;Ipsum&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;Dolor&#x3C;/th&#x3E;
+            &#x3C;th&#x3E;Sit&#x3C;/th&#x3E;
+        &#x3C;/tr&#x3E;
+    &#x3C;/thead&#x3E;
+    &#x3C;tbody&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;th rowspan=&#x22;3&#x22;&#x3E;Sit&#x3C;/th&#x3E;
+            &#x3C;td&#x3E;Dolor&#x3C;/td&#x3E;
+            &#x3C;td class=&#x22;numerical&#x22;&#x3E;03.788&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Lorem&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;td&#x3E;Dolor&#x3C;/td&#x3E;
+            &#x3C;td class=&#x22;numerical&#x22;&#x3E;32.210&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Lorem&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;td&#x3E;Dolor&#x3C;/td&#x3E;
+            &#x3C;td class=&#x22;numerical&#x22;&#x3E;47.797&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Lorem&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;th rowspan=&#x22;2&#x22;&#x3E;Sit&#x3C;/th&#x3E;
+            &#x3C;td&#x3E;Dolor&#x3C;/td&#x3E;
+            &#x3C;td class=&#x22;numerical&#x22;&#x3E;09.640&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Lorem&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+            &#x3C;td&#x3E;Dolor&#x3C;/td&#x3E;
+            &#x3C;td class=&#x22;numerical&#x22;&#x3E;12.117&#x3C;/td&#x3E;
+            &#x3C;td&#x3E;Lorem&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+    &#x3C;/tbody&#x3E;
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Large padding styles</h3>
+                    <table class="table--spacing-large">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--spacing-large&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Medium padding styles</h3>
+                    <table class="table--spacing-medium">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--spacing-medium&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Small padding styles</h3>
+                    <table class="table--spacing-small">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--spacing-small&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Bordered styles</h3>
+                    <table class="table--bordered">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--bordered&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Bordered row styles</h3>
+                    <table class="table--bordered-rows">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--bordered-rows&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Bordered column styles</h3>
+                    <table class="table--bordered-columns">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--bordered-columns&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Striped styles</h3>
+                    <table class="table--striped">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--striped&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Fixed cell width styles</h3>
+                    <table class="table--fixed">
+                        <thead>
+                            <tr>
+                                <th>Lorem</th>
+                                <th>Ipsum</th>
+                                <th>Dolor</th>
+                                <th>Sit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th rowspan="3">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">03.788</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">32.210</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">47.797</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">Sit</th>
+                                <td>Dolor</td>
+                                <td class="numerical">09.640</td>
+                                <td>Lorem</td>
+                            </tr>
+                            <tr>
+                                <td>Dolor</td>
+                                <td class="numerical">12.117</td>
+                                <td>Lorem</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;table class=&#x22;table--fixed&#x22;&#x3E;
+...
+&#x3C;/table&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="box">
+                <header>
+                    <h2>Box</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default Box</h3>
+
+                    <div class="box">
+                        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;box&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Flush Box</h3>
+
+                    <div class="box--flush">
+                        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;box--flush&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Tiny Box</h3>
+
+                    <div class="box--tiny">
+                        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;box--tiny&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Small Box</h3>
+
+                    <div class="box--small">
+                        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;box--small&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Large Box</h3>
+
+                    <div class="box--large">
+                        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;box--large&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Huge Box</h3>
+
+                    <div class="box--huge">
+                        The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;box--huge&#x22;&#x3E;
+    The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="horizontal-list">
+                <header>
+                    <h2>Horizontal List</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default Horizontal List</h3>
+                    <ul class="horizontal-list">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;horizontal-list&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Comma delimited horizontal list</h3>
+
+                    <ul class="horizontal-list horizontal-list--delimited">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;horizontal-list horizontal-list--delimited&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Centered horizontal list</h3>
+
+                    <ul class="horizontal-list horizontal-list--center">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;horizontal-list horizontal-list--center&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Right aligned horizontal list</h3>
+
+                    <ul class="horizontal-list horizontal-list--right">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;horizontal-list horizontal-list--right&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Fill style horizontal list</h3>
+
+                    <ul class="horizontal-list horizontal-list--fill">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;horizontal-list horizontal-list--fill&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="vertical-list">
+                <header>
+                    <h2>Vertical List</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default Vertical List</h3>
+
+                    <ul class="vertical-list">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;vertical-list&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Comma delimited vertical list</h3>
+
+                    <ul class="vertical-list vertical-list--delimited">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;vertical-list vertical-list--delimited&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="flag">
+                <header>
+                    <h2>Flag</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default Flag</h3>
+
+                    <div class="flag">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Reversed Flag</h3>
+                    <div class="flag--rev">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag--rev&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Flush flag</h3>
+                    <div class="flag flag--flush">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--flush&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Tiny flag</h3>
+                    <div class="flag flag--tiny">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--tiny&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Small flag</h3>
+                    <div class="flag flag--small">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--small&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Large flag</h3>
+                    <div class="flag flag--large">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--large&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Huge flag</h3>
+                    <div class="flag flag--huge">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--huge&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Middle aligned flag</h3>
+                    <div class="flag flag--middle">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--middle&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Bottom aligned flag</h3>
+                    <div class="flag flag--bottom">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--bottom&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Stacked flag</h3>
+                    <div class="flag flag--stacked">
+                        <div class="flag__figure">
+                            <img src="http://placekitten.com/g/150/150" alt="sdffadfdsf">
+                        </div>
+                        <div class="flag__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;flag flag--stacked&#x22;&#x3E;
+    &#x3C;div class=&#x22;flag__figure&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150&#x22; alt=&#x22;sdffadfdsf&#x22;&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;flag__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="media">
+                <header>
+                    <h2>Media Object</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default Media Object</h3>
+
+                    <div class="media">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Reversed media object</h3>
+
+                    <div class="media media--rev">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--rev&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Stacked media object</h3>
+
+                    <div class="media media--stacked">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--stacked&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Flush media object</h3>
+
+                    <div class="media media--flush">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--flush&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Tiny media object</h3>
+
+                    <div class="media media--tiny">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--tiny&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Small media object</h3>
+
+                    <div class="media media--small">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--small&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Large media object</h3>
+
+                    <div class="media media--large">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--large&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Huge media object</h3>
+
+                    <div class="media media--huge">
+                        <a class="media__figure" href="http://scalescss.github.io/scales">
+                            <img src="http://placekitten.com/g/150/150/">
+                        </a>
+                        <div class="media__body">
+                            <p>The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;media media--huge&#x22;&#x3E;
+    &#x3C;a class=&#x22;media__figure&#x22; href=&#x22;http://scalescss.github.io/scales&#x22;&#x3E;
+        &#x3C;img src=&#x22;http://placekitten.com/g/150/150/&#x22;&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;media__body&#x22;&#x3E;
+        &#x3C;p&#x3E;The domestic cat is a small, usually furry, domesticated, and carnivorous mammal. It is often called the housecat when kept as an indoor pet, or simply the cat when there is no need to distinguish it from other felids and felines.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="buttons">
+                <header>
+                    <h2>Buttons</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default buttons</h3>
+
+                    <a href="" class="btn">Link Button</a>
+                    <button class="btn">Button Button</button>
+                    <input class="btn" type="submit" value="Input Button">
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;a href=&#x22;&#x22; class=&#x22;btn&#x22;&#x3E;Link Button&#x3C;/a&#x3E;
+&#x3C;button class=&#x22;btn&#x22;&#x3E;Button Button&#x3C;/button&#x3E;
+&#x3C;input class=&#x22;btn&#x22; type=&#x22;submit&#x22; value=&#x22;Input Button&#x22;&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Disabled buttons</h3>
+
+                    <a href="" class="btn is-disabled">Link Button</a>
+                    <button class="btn is-disabled">Button Button</button>
+                    <input class="btn is-disabled" type="submit" value="Input Button">
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;a href=&#x22;&#x22; class=&#x22;btn is-disabled&#x22;&#x3E;Link Button&#x3C;/a&#x3E;
+&#x3C;button class=&#x22;btn is-disabled&#x22;&#x3E;Button Button&#x3C;/button&#x3E;
+&#x3C;input class=&#x22;btn is-disabled&#x22; type=&#x22;submit&#x22; value=&#x22;Input Button&#x22;&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="split">
+                <header>
+                    <h2>Split</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Split on a &lt;dl&gt;</h3>
+
+                    <dl class="split">
+                        <dt class="split__title">Google</dt>
+                        <dd>google.com</dd>
+                        <dt class="split__title">Wikipedia</dt>
+                        <dd>wikipedia.org</dd>
+                        <dt class="split__title">CNN</dt>
+                        <dd>cnn.com</dd>
+                    </dl>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;dl class=&#x22;split&#x22;&#x3E;
+    &#x3C;dt class=&#x22;split__title&#x22;&#x3E;Google&#x3C;/dt&#x3E;
+    &#x3C;dd&#x3E;google.com&#x3C;/dd&#x3E;
+    &#x3C;dt class=&#x22;split__title&#x22;&#x3E;Wikipedia&#x3C;/dt&#x3E;
+    &#x3C;dd&#x3E;wikipedia.org&#x3C;/dd&#x3E;
+    &#x3C;dt class=&#x22;split__title&#x22;&#x3E;CNN&#x3C;/dt&#x3E;
+    &#x3C;dd&#x3E;cnn.com&#x3C;/dd&#x3E;
+&#x3C;/dl&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Split on a &lt;ul&gt;</h3>
+
+                    <ul class="split">
+                        <li><span class="split__title">Google</span> google.com</li>
+                        <li><span class="split__title">Wikipedia</span> wikipedia.org</li>
+                        <li><span class="split__title">CNN</span> cnn.com</li>
+                    </ul>​
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;split&#x22;&#x3E;
+    &#x3C;li&#x3E;&#x3C;span class=&#x22;split__title&#x22;&#x3E;Google&#x3C;/span&#x3E; google.com&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;span class=&#x22;split__title&#x22;&#x3E;Wikipedia&#x3C;/span&#x3E; wikipedia.org&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;&#x3C;span class=&#x22;split__title&#x22;&#x3E;CNN&#x3C;/span&#x3E; cnn.com&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;&#x200B;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="stats">
+                <header>
+                    <h2>Stats</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Default stats</h3>
+
+                    <div class="stat-group">
+                        <dl class="stat">
+                            <dt class="stat__title">RBI</dt>
+                            <dd class="stat__value">127</dd>
+                        </dl>
+
+                        <dl class="stat">
+                            <dt class="stat__title">BA</dt>
+                            <dd class="stat__value">.369</dd>
+                        </dl>
+
+                        <dl class="stat">
+                            <dt class="stat__title">HR</dt>
+                            <dd class="stat__value">25</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;stat-group&#x22;&#x3E;
+    &#x3C;dl class=&#x22;stat&#x22;&#x3E;
+        &#x3C;dt class=&#x22;stat__title&#x22;&#x3E;RBI&#x3C;/dt&#x3E;
+        &#x3C;dd class=&#x22;stat__value&#x22;&#x3E;127&#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+
+    &#x3C;dl class=&#x22;stat&#x22;&#x3E;
+        &#x3C;dt class=&#x22;stat__title&#x22;&#x3E;BA&#x3C;/dt&#x3E;
+        &#x3C;dd class=&#x22;stat__value&#x22;&#x3E;.369&#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+
+    &#x3C;dl class=&#x22;stat&#x22;&#x3E;
+        &#x3C;dt class=&#x22;stat__title&#x22;&#x3E;HR&#x3C;/dt&#x3E;
+        &#x3C;dd class=&#x22;stat__value&#x22;&#x3E;25&#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Big Stats</h3>
+                    <div class="stat-group--big">
+                        <dl class="stat">
+                            <dt class="stat__title">Total Runs Batted In</dt>
+                            <dd class="stat__value">127</dd>
+                        </dl>
+
+                        <dl class="stat">
+                            <dt class="stat__title">Total Batting Average</dt>
+                            <dd class="stat__value">.369</dd>
+                        </dl>
+
+                        <dl class="stat">
+                            <dt class="stat__title">Total Home Runs</dt>
+                            <dd class="stat__value">25</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;div class=&#x22;stat-group--big&#x22;&#x3E;
+    &#x3C;dl class=&#x22;stat&#x22;&#x3E;
+        &#x3C;dt class=&#x22;stat__title&#x22;&#x3E;Total Runs Batted In&#x3C;/dt&#x3E;
+        &#x3C;dd class=&#x22;stat__value&#x22;&#x3E;127&#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+
+    &#x3C;dl class=&#x22;stat&#x22;&#x3E;
+        &#x3C;dt class=&#x22;stat__title&#x22;&#x3E;Total Batting Average&#x3C;/dt&#x3E;
+        &#x3C;dd class=&#x22;stat__value&#x22;&#x3E;.369&#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+
+    &#x3C;dl class=&#x22;stat&#x22;&#x3E;
+        &#x3C;dt class=&#x22;stat__title&#x22;&#x3E;Total Home Runs&#x3C;/dt&#x3E;
+        &#x3C;dd class=&#x22;stat__value&#x22;&#x3E;25&#x3C;/dd&#x3E;
+    &#x3C;/dl&#x3E;
+&#x3C;/div&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="multi-col-list">
+                <header>
+                    <h2>Multi-Column List</h2>
+                </header>
+                <div class="pattern">
+                    <h3>Two columns</h3>
+
+                    <ul class="multi-col-list two-columns">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>.NET</li>
+                        <li>Ruby</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;multi-col-list two-columns&#x22;&#x3E;
+    &#x3C;li&#x3E;Sass&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;CSS&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;HTML&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;Javascript&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;PHP&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;Python&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;C++&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;.NET&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;Ruby&#x3C;/li&#x3E;
+    &#x3C;li&#x3E;Node&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Three columns</h3>
+
+                    <ul class="multi-col-list three-columns">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>.NET</li>
+                        <li>Ruby</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;multi-col-list three-columns&#x22;&#x3E;
+...
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Four columns</h3>
+
+                    <ul class="multi-col-list four-columns">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>.NET</li>
+                        <li>Ruby</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;multi-col-list four-columns&#x22;&#x3E;
+...
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Five columns</h3>
+
+                    <ul class="multi-col-list five-columns">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>.NET</li>
+                        <li>Ruby</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;multi-col-list five-columns&#x22;&#x3E;
+...
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+                <div class="pattern">
+                    <h3>Six columns</h3>
+
+                    <ul class="multi-col-list six-columns">
+                        <li>Sass</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Javascript</li>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>.NET</li>
+                        <li>Ruby</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+                <div class="markup">
+                    <h4>Usage:</h4>
+                    <pre><code>
+&#x3C;ul class=&#x22;multi-col-list six-columns&#x22;&#x3E;
+...
+&#x3C;/ul&#x3E;
+                    </code></pre>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,306 @@
+---
+layout: slides
+title:  "Talks: Scales - A design-free collection of OOCSS patterns, framework settings, and utilities to quickly build mobile-first, responsive web projects"
+---
+<section>
+    <img style="border: 0; box-shadow: 0 0 0 0;" src="/img/talks/scales/scales.png" alt="Scales CSS Framework">
+    <aside class="notes">
+        Today I'm going to talk about a new CSS Framework that I created called Scales. You might be saying to yourself:
+    </aside>
+</section>
+
+<section>
+    <h2>CSS is easy!</h2>
+    <h3>Why would I need a framework?</h3>
+    <img src="/img/talks/scales/tooeasy.jpg">
+    <aside class="notes">
+        You're right. CSS is easy. But that's exactly the reason, the simplicity, the looseness, that makes a solid architecture the best way to manage CSS at any reasonable scale. A CSS framework can provide that architecture by controlling specificity, enforce naming conventions, manage source order, and keeping things consistent.
+    </aside>
+</section>
+
+<section>
+
+    <img src="/img/talks/scales/frameworks.png">
+    <aside class="notes">
+        Clearly there is a need for css frameworks. There are dozens of them out there already. Some of them are really great. They help solve a lot of common problems, the biggest being a design out of the box for people who aren't great at design. Now you should have a new question:
+    </aside>
+</section>
+
+<section>
+    <h2>Why would you write another framework?</h2>
+    <img src="/img/talks/scales/crazy.gif">
+    <img class="fragment" src="/img/talks/scales/crazier.gif">
+</section>
+
+<section>
+    <h2>What's wrong with existing frameworks?</h2>
+
+    <ul>
+        <li class="fragment">Design</li>
+        <li class="fragment">Tools</li>
+        <li class="fragment">RWD assumptions</li>
+        <li class="fragment">Tightly coupled components</li>
+        <li class="fragment">BLOAT!</li>
+    </ul>
+    <h3 style="margin-top: 25px;" class="fragment">Let me make the decisions!</h3>
+
+    <aside class="notes">
+        I started looking for a framework or UI toolkit to make development more consistent on client facing web projects. Wasn't happy with what I found. They all make too many decisions for me.
+        <ul>
+            <li>A design I would have to override</li>
+            <li>I want to make these choices. Grids, icons, etc.</li>
+            <li>Predefined breakpoints, not content first</li>
+            <li>Requiring me to use all or nothing</li>
+            <li>All of this adds bloat</li>
+        </ul>
+
+    </aside>
+</section>
+
+<section>
+    <h3 class="fragment">A framework should help me solve design problems.</h3>
+    <h3 class="fragment">It shouldn't do my work for me.</h3>
+
+    <aside class="notes">
+        I actually don't agree that most of these frameworks should be called frameworks. They do too much. Things like bootstrap and foundation should more accurately be called UI Toolkits because they actually make design decisions for you and give you more than just a helping hand with your CSS.
+    </aside>
+</section>
+
+<section>
+    <h2>What makes Scales different?</h2>
+    <p class="fragment">A design-free, independent collection of OOCSS patterns, framework settings, and utilities for quickly building responsive web projects</p>
+    <aside class="notes">
+
+    </aside>
+</section>
+
+<section>
+    <h2>Design Free</h2>
+    <img class="fragment" src="/img/talks/scales/notime.gif">
+
+    <aside class="notes">
+        Like I mentioned before, I get a design from the design team or I make it up myself. A design isn't helpful for me and just means I have to override a bunch of styles.
+    </aside>
+</section>
+
+<section>
+    <h2>Independent</h2>
+    <img width="500" src="/img/talks/scales/patterns.png">
+
+    <aside class="notes">
+        Each piece of scales is broken up into it's own repo and is independent of the others. The only dependency some of them have is a clearfix utility.
+    </aside>
+</section>
+
+<section>
+    <h2>Object Oriented CSS</h2>
+    <p class="fragment">CSS "Object" - A repeating visual pattern that can be abstracted into an independent, reusable snippet of HTML and CSS</p>
+
+    <aside class="notes">
+        <p>OOCSS is at the heart of what Scales is. But what is a CSS object?</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Media Object</h2>
+    <p>A fixed piece of media on the left (image, video, icon) and some unknown content to the right.</p>
+    <img style="border: 0; box-shadow: 0 0 0 0;" width="45%" class="fragment" src="/img/talks/scales/mediaobject.png">
+    <img style="border: 0; box-shadow: 0 0 0 0;" width="45%" class="fragment" src="/img/talks/scales/mediaobject2.png">
+    <pre class="fragment"><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;<div class="media">
+        <a class="media__figure" href="facebook.com">
+            <img src="avatar.png">
+        </a>
+        <div class="media__body">
+            <p>Dave Gillhespy</p>
+        </div>
+    </div>
+    </code></pre>
+
+    <aside class="notes">
+        <p>This is the poster child for OOCSS methodology. A media object is made up of a fixed piece of media on the left (image, video, icon) and some unknown content to the right. These are seen all over the web on nearly every site. Lets look at a fb status as an example. See any media objects in there? There are 4 and they all could use this same markup pattern.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Media Object</h2>
+
+    <pre><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;<div class="media">
+        <a class="media__figure" href="facebook.com">
+            <img src="avatar.png">
+        </a>
+        <div class="media__body">
+            <p>Dave Gillhespy</p>
+        </div>
+    </div>
+    </code></pre>
+
+    <pre><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;.media {
+        @extend %clearfix;
+        display: block;
+    }
+    .media__figure {
+        float: left;
+        margin-right: 1em;
+
+        > img {
+            display: block;
+        }
+    }
+    .media_body {
+        overflow: hidden;
+        display: block;
+
+        &,
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+    </code></pre>
+
+    <aside class="notes">
+        And just a tiny bit of CSS. Now multiply that over 1000 status messages in your newsfeed and you can see the CSS savings you get with this methodology.
+    </aside>
+</section>
+
+<section>
+    <h2>OOCSS Principles</h2>
+    <ul class="fragment">
+        <li><h4>Separation of Structure from Skin</h4></li>
+        <li><h4>Separation of Content from Container</h4></li>
+    </ul>
+
+    <aside class="notes">
+        The OOCSS principles are simple.
+    </aside>
+
+</section>
+
+<section>
+    <h2>Structure vs. Skin</h2>
+
+    <pre class="fragment"><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;.btn {
+        display: inline-block;
+        font-size: 1.5em;
+        padding: 1em 2em;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn--primary {
+        background-color: blue;
+        color: white;
+    }
+    .btn--warning {
+        background-color: orange;
+        color: black;
+    }
+    </code></pre>
+
+    <pre class="fragment"><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn--primary">Primary Button</button>
+    <button class="btn btn--warning">Warning Button</button>
+    </code></pre>
+
+    <img class="fragment" width="350" style="border: 0; box-shadow: 0 0 0 0;" src="/img/talks/scales/buttons.png">
+
+    <aside class="notes">
+        This is the main principle of OOCSS and it's really easy to do. Simply separate the structural elements of your object into one class (btn) and then extend the object to add a skin to it (btn--primary). So we can make any number of buttons that look different, but share the same CSS for the structure.
+    </aside>
+</section>
+
+<section>
+    <h2>Content vs. Container</h2>
+
+    <pre class="fragment"><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;.category-list h3 {
+        font-size: 2em;
+        color: red;
+    }
+    </code></pre>
+
+    <pre class="fragment"><code data-trim>
+        &nbsp;&nbsp;&nbsp;&nbsp;.heading--secondary {
+        font-size: 2em;
+        color: red;
+    }
+    </code></pre>
+
+    <aside class="notes">
+        Imagine having a list of categories on your site that have a heading above them. We could do something like this. But we are essentially tieing that h3 and it's styles to the .category-list class. What if we want to use the same style heading somewhere else? For content object like headings, we would make a new class for the h3 instead. Now we can use that class anywhere for the same styles.
+    </aside>
+</section>
+
+<section>
+    <h2>Yay Modularity!</h2>
+    <img src="/img/talks/scales/yay.gif">
+    <p>(Seriously, OOCSS is awesome)</p>
+</section>
+
+<section>
+    <h2>What's in Scales?</h2>
+    <img style="width: 300px; border: 0; box-shadow: 0 0 0 0;" src="/img/talks/scales/scales.png" alt="Scales CSS Framework">
+    <p><a href="/stuff/scales.html">Scales Pattern Library</a></p>
+    <p class="fragment"><a href="https://github.com/ScalesCSS">Scales on Github</a></p>
+
+    <aside class="notes">
+        Let's look at what Scales actually comes with and what problems it solves. When I start a new site, I like to first build a pattern library, which is basically OOCSS legos that I can use to build the design I have. Remember, Scales has no design so expect utility here, not beauty.
+    </aside>
+</section>
+
+<section>
+    <h3>That's it?</h3>
+    <p class="fragment">4kb minified and gzipped</p>
+    <h3 class="fragment">Yes, that's it!</h3>
+
+    <aside class="notes">
+        You may be thinking "There doesn't seem to be that much here." Well, you're right. Scales is intentionaly a tiny framework. For those familiar with PHP frameworks, you can think of Scales like a micro framework, such as Slim. It only does a few things to help you get a leg up and makes it easy to extend what's there and add the tools that you want. Other frameworks like Bootstrap would be more comparable to a Full-stack framework like Zend. It does a TON of stuff for you, but it's really hard to change the tools it decided for you to use.
+    </aside>
+</section>
+
+<section>
+    <h3>Demo Time!</h3>
+
+    <aside class="notes">
+        To prove how easy and useful Scales is, I'm going to do a live demo.
+    </aside>
+</section>
+
+<section>
+    <h3>Awesome! How do I get it?</h3>
+    <ul>
+        <li><a href="https://github.com/ScalesCSS">All of the Scales Repos on Github</a></li>
+        <li><a href="https://github.com/ScalesCSS/scales">How to get started</a></li>
+    </ul>
+
+    <aside class="notes">
+        Each piece of Scales is available in a separate github repo, so you can integrate the pieces you want directly into an existing project. Or you can start from scratch and grab everything.
+    </aside>
+</section>
+
+<section>
+    <h3>The Future of Scales</h3>
+    <ul>
+        <li class="fragment">NuGet package</li>
+        <li class="fragment">NPM packages</li>
+        <li class="fragment">Yeoman generator</li>
+        <li class="fragment">A prototyping theme</li>
+        <li class="fragment">A theme based on the <a href="/stuff/qlpatterns.pdf" target="_blank">QL Digital Pattern Library</a></li>
+    </ul>
+
+    <aside class="notes">
+        Right now Scales is only available as Bower packages. I will be adding a NuGet package for easier use in .NET projects, I'll make it available on NPM for those who don't like bower, and I'll be making a generator using Yeoman for easier project setup. On top of that, I will be building a theme on top of scales that will make prototyping really easy and the thing I'm most excited about is a theme based on the QL pattern library. Not a lot of people have seen this, but a few engineers on the web tier worked with the product design team to create guidelines for what QL websites should look like in the future.
+    </aside>
+</section>
+
+<section>
+    <h3>Questions?</h3>
+    <img style="border: 0; box-shadow: 0 0 0 0;" src="/img/talks/scales/curious.gif">
+
+    <aside class="notes">
+
+    </aside>
+</section>
