@@ -1,0 +1,194 @@
+---
+layout: slides
+title:  "Talks: QL Browser Support"
+---
+<section>
+    <h2>QL Browser Support</h2>
+    <img style="width: 500px; border: 0; box-shadow: 0 0 0 0;" src="/img/talks/browsers/internet-exploder.jpg"></li>
+    <aside class="notes">
+
+    </aside>
+</section>
+
+<section>
+    <h2>The Virtual Team</h2>
+    <ul>
+        <li>Jen May</li>
+        <li>Erik Woods</li>
+        <li>Jim Starr</li>
+        <li>Matthew Pruitt</li>
+        <li>Chris Raheb</li>
+        <li>Keith House</li>
+        <li>Mathew Stollman</li>
+        <li>Jason Charles</li>
+        <li>Kevin Vrsek</li>
+        <li>Dave Gillhespy</li>
+    </ul>
+
+    <aside class="notes">
+        A few months ago we put together a virtual team to address the issue of browser support on our client facing websites. The team is currently made up of these fine folks from several Impossibles teams, marketing, BI, COE, and AppOps.
+    </aside>
+</section>
+
+<section>
+    <h2>The Goal</h2>
+    <ul>
+        <li class="fragment">What browsers do we support?</li>
+        <li class="fragment">What do we test?</li>
+        <li class="fragment">What does support even mean?<br>
+            <img style="width: 400px; border: 0; box-shadow: 0 0 0 0;" src="/img/talks/browsers/eyes.jpg"></li>
+    </ul>
+
+    <aside class="notes">
+        The goal of this virtual team is to make a recommendation to our client facing web teams for how to handle browser support in the future. What browsers should we support, where should we focus our testing efforts, and what does support even mean?
+    </aside>
+</section>
+
+<section>
+    <h2>The Problem</h2>
+    <ul>
+        <li class="fragment">No policy for browser support</li>
+        <li class="fragment">Teams left to decide on their own</li>
+        <li class="fragment">What does support really mean?</li>
+        <li class="fragment">No process for bringing on new browsers or killing older ones</li>
+    </ul>
+
+    <aside class="notes">
+        Currently QL doesn't have a policy for browser support. Each team basically decides for themselves based on metrics or the technology choices they make. It's unclear what support really means. And we have no process for adding new browsers or removing old browsers from our testing matrixes.
+    </aside>
+
+</section>
+
+<section>
+    <h2>Options for support</h2>
+    <ul>
+        <li class="fragment">A banner across the top of the page</li>
+        <li class="fragment">A banner with a button</li>
+        <li class="fragment">Complete lockout</li>
+        <li class="fragment">Feature Lockout</li>
+    </ul>
+
+    <aside class="notes">
+        We've spent a lot of time discussing various options for what support actually looks like in older browsers. There were a few that stood out as the main choices.
+        <ul>
+            <li>This is our current solution. We have a friendly message informing the client that their experience might not be ideal and provide links to better browsers. Can still access the site, even if it looks broken.</li>
+            <li>Same as current, but they have to click something to acknowledge the message, otherwise they get locked out. Annoying...not much differnt from a popup.</li>
+            <li>If the users comes from an unsupported browser, they are locked out completely with a message explaining why. Removes need for any testing in old browsers, but has some major UX implications. Can;t get even basic info that should work in any browser.</li>
+            <li>Certain features that absolutely can't work in older browsers are locked out with a message explaining why. Can view rest of the site like normal.</li>
+        </ul>
+    </aside>
+
+</section>
+
+<section>
+    <h2>Our Recommendation</h2>
+    <ul>
+        <li class="fragment">Evergreen browser support</li>
+        <li class="fragment">Continue using the banner</li>
+        <li class="fragment">Limited feature lockout</li>
+        <li class="fragment">A "Zero Support" cutoff</li>
+        <li class="fragment">Support for Core Functionality</li>
+    </ul>
+
+    <aside class="notes">
+        This is a hard problem and we want to give the best recommendation that we can, but we've come up with a pretty solid plan that we hope to present to senior leadership, but we wanted to present it here first and get feedback and input before we do. These ideas come from looking at our own metrics across our sites, looking at what other companies do, and deciding how we can "do the right thing" for our clients.
+        <ul>
+            <li>This means supporting the current and previous version of major browsers. We will have a list of what a "major browser is" soon.</li>
+            <li>This has worked for us so far and is a good comprimise that doesn;t cause any terrible UX problems.</li>
+            <li>We know there are going to be times where something important really can't work in an old browsers. In those rare occasions, we would recommend locking out specific features.</li>
+            <li>This means that at some percentage, which we haven't decided on yet, we absolutely never look at that browser again for testing and instruct CCSs to tell clients they must use a different browser if they call with problems.</li>
+            <li>For browsers in between evergreen and zero support, testing will be limited to Core Fucntionality.</li>
+        </ul>
+    </aside>
+
+</section>
+
+<section>
+    <h2>Core Functionality</h2>
+    <p class="fragment">What is the purpose of my site?</p><br>
+    <h3 class="fragment">MyQL Example</h3>
+    <ul>
+        <li class="fragment">See the status of my loan</li>
+        <li class="fragment">View and upload documents</li>
+    </ul><br><br>
+    <p class="fragment">Everything else can be considered an enhancement</p>
+    <p class="fragment">New features: Is this core functionality or is this an enhancement?</p>
+
+    <aside class="notes">
+        This is a new idea, so I want to spend a little extra time here. We want to recommend that every site looks at their features and answers the questions "what is the purpse of my site?" What is my site for? what MUST work for clients every time?
+        <ul>
+            <li>This should be a very small list.</li>
+            <li>This is a decision that will need to be made with the business, our product owners, and pmo.</li>
+            <li>I can't make this decision for MyQL, but from what I know of the site, I would say the core functionality of MyQL is to see the status of my loan and to view and upload documents.</li>
+            <li>Everything else is an enhancement</li>
+        </ul>
+        The benefit here is that we are reaching the largest number of clients that we can by providing basic support for the key features of our sites. It's also benefitial for engineers to be able to make the right technology decisions. If core functionality must work, maybe a certain JS framework or CSS technique isn't the right choice.
+    </aside>
+
+</section>
+
+<section>
+    <h3>What does this mean for testing?</h3>
+    <p class="fragment">A graded approach</p>
+    <ul>
+        <li class="fragment">Tier 1
+            <ul>
+                <li>Evergreen browsers</li>
+                <li>Full testing of all features and pages. Site should be bug free and visually correct throughout</li>
+                <li>Feature lockout if needed (should be very rare!)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <aside class="notes">
+        This means we take a graded approach to our support.
+    </aside>
+
+</section>
+
+<section>
+    <h3>What does this mean for testing?</h3>
+    <p>A graded approach</p>
+    <ul>
+        <li>Tier 2
+            <ul>
+                <li>Partially supported browsers (2 or more version behind current)</li>
+                <li>Core funtionality tested and bug free. Visual incorrectness is expected unless it detrimentally impeeds core functionality</li>
+                <li>Banner encouraging upgrade</li>
+            </ul>
+        </li>
+    </ul>
+
+    <aside class="notes">
+
+    </aside>
+
+</section>
+
+<section>
+    <h3>What does this mean for testing?</h3>
+    <p>A graded approach</p>
+    <ul>
+        <li>Tier 3
+            <ul>
+                <li>Zero Support browsers (below % threshold)</li>
+                <li>Not tested. Clients instructed by CCSs to upgrade.</li>
+                <li>Banner encouraging upgrade (with a button, maybe?)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <aside class="notes">
+
+    </aside>
+
+</section>
+
+<section>
+    <h2>Feedback?</h2>
+    <img style="width: 350px; border: 0; box-shadow: 0 0 0 0;" src="/img/talks/browsers/feedback.jpg"></li>
+
+    <aside class="notes">
+        Remember, these are just recommendations for a baseline of support. If the metrics for a particular site indicate that different support is needed, it's ok to adjust.
+    </aside>
+</section>
