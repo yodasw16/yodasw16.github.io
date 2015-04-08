@@ -62,7 +62,7 @@ Take a look at this list of resources and make yourself better!
 *   [http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/](http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/)
 *   [http://24ways.org/2012/a-harder-working-class/](http://24ways.org/2012/a-harder-working-class/)
 *   [https://github.com/stubbornella/oocss](https://github.com/stubbornella/oocss)
-*   [https://github.com/yodasw16/scales](https://github.com/yodasw16/scales)
+*   [https://github.com/ScalesCSS/scales](https://github.com/ScalesCSS/scales)
 *   [https://github.com/csswizardry/inuit.css](https://github.com/csswizardry/inuit.css)
 
 ### Javasript Unit Testing
@@ -90,6 +90,7 @@ Take a look at this list of resources and make yourself better!
 
 ### BEM (Block, Element, Modifier)
 *   [http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
+*   [https://css-tricks.com/bem-101/](https://css-tricks.com/bem-101/)
 
 ### Performance
 
