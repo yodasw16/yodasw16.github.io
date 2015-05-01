@@ -22,6 +22,7 @@ title:  "Talks: QL Browser Support"
         <li>Mathew Stollman</li>
         <li>Jason Charles</li>
         <li>Kevin Vrsek</li>
+        <li>Eric Pelkey</li>
         <li>Dave Gillhespy</li>
     </ul>
 
@@ -83,7 +84,16 @@ title:  "Talks: QL Browser Support"
 <section>
     <h2>Our Recommendation</h2>
     <ul>
-        <li class="fragment">Evergreen browser support</li>
+        <li class="fragment">Evergreen browser support
+            <ul class="fragment">
+                <li>Internet Explorer - ~36%</li>
+                <li>Google Chrome - ~24%</li>
+                <li>Mozilla Firefox - ~13%</li>
+                <li>Apple Safari (desktop &amp; mobile) - ~19%</li>
+                <li>Android Browser - ~2%</li>
+                <li>Mobile Chrome - ~6%</li>
+            </ul>
+        </li>
         <li class="fragment">Continue using the banner</li>
         <li class="fragment">Limited feature lockout</li>
         <li class="fragment">A "Zero Support" cutoff</li>
@@ -91,12 +101,12 @@ title:  "Talks: QL Browser Support"
     </ul>
 
     <aside class="notes">
-        This is a hard problem and we want to give the best recommendation that we can, but we've come up with a pretty solid plan that we hope to present to senior leadership, but we wanted to present it here first and get feedback and input before we do. These ideas come from looking at our own metrics across our sites, looking at what other companies do, and deciding how we can "do the right thing" for our clients.
+        This is a hard problem and we want to give the best recommendation that we can, but we've come up with a pretty solid plan that we hope to deliver to our engineers and QA, but we wanted to present it here first and get feedback and input before we do. These ideas come from looking at our own metrics across our sites, looking at what other companies do, and deciding how we can "do the right thing" for our clients.
         <ul>
-            <li>This means supporting the current and previous version of major browsers. We will have a list of what a "major browser is" soon.</li>
+            <li>This means supporting the current and previous version of major browsers. These numbers are from the last 3 months on QL.com. These numbers are pretty close on all of our sites.</li>
             <li>This has worked for us so far and is a good comprimise that doesn;t cause any terrible UX problems.</li>
             <li>We know there are going to be times where something important really can't work in an old browsers. In those rare occasions, we would recommend locking out specific features.</li>
-            <li>This means that at some percentage, which we haven't decided on yet, we absolutely never look at that browser again for testing and instruct CCSs to tell clients they must use a different browser if they call with problems.</li>
+            <li>This means that for browsers with less a certain % usage we absolutely never look at that browser again for testing and instruct CCSs to tell clients they must use a different browser if they call with problems.</li>
             <li>For browsers in between evergreen and zero support, testing will be limited to Core Fucntionality.</li>
         </ul>
     </aside>
@@ -152,9 +162,10 @@ title:  "Talks: QL Browser Support"
     <ul>
         <li>Tier 2
             <ul>
-                <li>Partially supported browsers (2 or more version behind current)</li>
+                <li>Partially supported browsers (2 or more version behind current but greater than 1% of unique visits)</li>
                 <li>Core funtionality tested and bug free. Visual incorrectness is expected unless it detrimentally impeeds core functionality</li>
                 <li>Banner encouraging upgrade</li>
+                <li>May not need to be tested as frequently as Tier 1</li>
             </ul>
         </li>
     </ul>
@@ -171,7 +182,7 @@ title:  "Talks: QL Browser Support"
     <ul>
         <li>Tier 3
             <ul>
-                <li>Zero Support browsers (below % threshold)</li>
+                <li>Zero Support browsers (below 1% threshold)</li>
                 <li>Not tested. Clients instructed by CCSs to upgrade.</li>
                 <li>Banner encouraging upgrade (with a button, maybe?)</li>
             </ul>
