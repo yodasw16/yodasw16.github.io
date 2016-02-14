@@ -9,7 +9,6 @@ body {
 .logo {
     width: 6em;
     margin: 0 auto;
-    @include rhythm(1,0,0,1.75);
     display: block;
 }
 
@@ -24,7 +23,7 @@ body {
 .list--inline {
     li {
         display: inline-block;
-        margin-right: msem(1);
+        margin-right: ms(1);
 
         &:last-child {
             margin-right: 0;
@@ -37,7 +36,7 @@ body {
 
     a {
         color: $blue;
-        @include adjust-font-size-to(ms(4));
+        font-size: ms(4);
 
         &:hover {
             text-decoration: none;
@@ -63,7 +62,7 @@ body {
 }
 
 .hearts {
-    @include trailer(1);
+    margin-bottom: ms(1);
 }
 
 .hearts:after {
@@ -71,13 +70,12 @@ body {
     display: block;
     text-align: center;
     color: #de4e43;
-    @include leader(1);
-    @include adjust-font-size-to(ms(1));
+    margin-top: ms(1);
+    font-size: ms(1);
 }
 
 .devtroit {
-    margin: 0 auto;
-    @include trailer;
+    margin: 0 auto ms(1);
     width: 90px;
     display: block;
 }
@@ -96,14 +94,14 @@ main {
     margin: 0;
     margin-left: -.5em;
     margin-right: -.5em;
-    @include trailer(1);
+    margin-bottom: ms(1);
 
     .nav {
         text-align: center;
 
         li {
             display: inline-block;
-            margin-right: msem(1);
+            margin-right: ms(1);
 
             &:last-child {
                 margin-right: 0;
@@ -112,13 +110,13 @@ main {
     }
 
     &:before {
-        @include clearfix;
-        @include trailer();
+        @extend %clearfix;
+        margin-bottom: ms(1);
         content: " ";
         display: block;
-        height: msem(-4);
-        @include background-image(linear-gradient(
-            left,
+        height: ms(-4);
+        background-image: linear-gradient(
+            to right,
             $blue 0%,
             $blue 25%,
             $light-blue 25%,
@@ -127,7 +125,7 @@ main {
             $yellow 75%,
             $red 75%,
             $red 100%
-        ));
+        );
     }
 
     @include breakpoint($palm-end) {
@@ -137,7 +135,7 @@ main {
 }
 
 .posts li {
-    @include trailer(1);
+    margin-bottom: ms(1);
 
     &:last-of-type {
         margin-bottom: 0;
@@ -145,7 +143,7 @@ main {
 }
 
 .header--article {
-    @include trailer();
+    margin-bottom: ms(1);
 }
 
 .post-meta time {
@@ -163,10 +161,7 @@ main {
 blockquote {
   background: $white;
   border-left: 10px solid $yellow;
-  @include padding-leader(.5);
-  @include padding-trailer(.5);
-  padding-left: msem(-2);
-  padding-right: msem(-2);
+  padding: ms(-2);
 }
 
 blockquote p:first-of-type:before {
@@ -179,10 +174,7 @@ blockquote p:last-of-type:after {
 
 .inline-code {
     font-family: monospace;
-    @include adjust-font-size-to(ms(-1));
-    padding-left: msem(-4);
-    padding-right: msem(-4);
+    font-size: ms(-1);
+    padding: ms(-4);
     background-color: $light-blue;
-    @include padding-trailer(.15);
-    @include padding-leader(.15);
 }

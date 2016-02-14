@@ -22,7 +22,7 @@ By combining
 
 * A [flexible grid](http://www.alistapart.com/articles/fluidgrids/) based layout
 * [Flexible images](http://unstoppablerobotninja.com/entry/fluid-images)
-* [Media queries](http://thinkvitamin.com/design/getting-started-and-gotchas-of-css-media-queries/)
+* [Media queries](https://developers.google.com/web/fundamentals/design-and-ui/responsive/fundamentals/use-media-queries?hl=en)
 
 we are able to develop websites the way the web always intended. These techniques together have come to be known as [Responsive Web Design](http://www.alistapart.com/articles/responsive-web-design/).
 

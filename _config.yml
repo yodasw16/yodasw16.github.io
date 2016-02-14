@@ -1,7 +1,18 @@
-name: davidgillhespy.com
-description: "The blog of Dave Gillhespy: web developer and pretty awesome guy"
+# Setup
+title: David Gillhespy
 url: http://davidgillhespy.com
-markdown: redcarpet
-highlighter: pygments
 paginate: 5
-exclude: [sass, node_modules, Gemfile, Gemfile.lock, Gruntfile.js, package.json]
+gems: ["jekyll-paginate"]
+
+# About/contact
+author:
+  name: Dave Gillhespy
+  url: https://davidgillhespy.com
+  email: yodasw16@gmail.com
+
+# Custom vars
+github:
+  repo: https://github.com/yodasw16/yodasw16.github.io
+
+# Exclude
+exclude: [node_modules, sass, package.json, gulpfile.js]

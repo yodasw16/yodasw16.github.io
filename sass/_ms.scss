@@ -1,0 +1,16 @@
+// Modular Scale
+$ms-base: $base-font-size $base-line-height;
+$ms-ratio: $fourth;
+
+$h1-size: ms(6);
+$h2-size: ms(4);
+$h3-size: ms(3);
+$h4-size: ms(2);
+$h5-size: ms(1);
+$h6-size: ms(0);
+
+// Spacing
+$space-s: ms(-4);
+$space-m: ms(0);
+$space-l: ms(5);
+$space-h: ms(8);

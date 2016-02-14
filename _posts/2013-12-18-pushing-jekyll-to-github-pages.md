@@ -17,4 +17,4 @@ It turns out the issue was my own poor reading of the docs, rather than anything
     <figcaption class="source"><cite><a href="https://help.github.com/articles/using-jekyll-with-pages">Using Jekyll with Pages</a></cite></figcaption>
 </figure>
 
-All I ever needed to do was push my source files to <span class="inline-code">master</span> and Github would automatically run them through Jekyll. It just works. I completely misunderstood this and wasted a lot of time on hacky and confusing workarounds like [subtree merging](http://git-scm.com/book/ch6-7.html). I might be the only person who has had this problem, but if not I hope this is helpful.
+All I ever needed to do was push my source files to <span class="inline-code">master</span> and Github would automatically run them through Jekyll. It just works. I completely misunderstood this and wasted a lot of time on hacky and confusing workarounds like [subtree merging](https://git-scm.com/book/en/v1/Git-Tools-Subtree-Merging). I might be the only person who has had this problem, but if not I hope this is helpful.

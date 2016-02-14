@@ -1,9 +1,27 @@
 {
-  "name": "davidgillhespy.com",
+  "name": "yodasw16.github.io",
+  "version": "2.0.0",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yodasw16/yodasw16.github.io.git"
+  },
+  "author": "Dave Gillhespy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yodasw16/yodasw16.github.io/issues"
+  },
+  "homepage": "https://github.com/yodasw16/yodasw16.github.io",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-compass": "^0.9.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-shell": "^0.7.0"
+    "breakpoint-sass": "^2.6.1",
+    "browser-sync": "^2.10.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-sass": "^2.1.1",
+    "modularscale-sass": "^2.1.1",
+    "scalescss": "^2.2.2"
   }
 }
