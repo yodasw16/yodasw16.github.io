@@ -1,9 +1,9 @@
 @import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "../node_modules/modularscale-sass/stylesheets/modular-scale";
-@import "colors";
-@import "settings";
-@import "ms";
-@import "scales";
-@import "typography";
+@import "partials/colors";
+@import "partials/settings";
+@import "partials/ms";
+@import "partials/scales";
+@import "partials/typography";
 @import "partials/global";
 @import "partials/icons";

@@ -1,0 +1,58 @@
+p, pre {
+  margin-bottom: ms(4);
+}
+
+h1, .h1, .alpha,
+h2, .h2, .beta,
+h3, .h3, .gamma,
+h4, .h4, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+  line-height: ms(6);
+  margin-bottom: ms(4);
+}
+
+ul, ol {
+  margin-left: ms(6);
+  margin-bottom: ms(4);
+}
+
+.quote {
+    margin: 0 0 ms(4);
+}
+
+blockquote {
+  background: $white;
+  border-left: 10px solid $yellow;
+  padding: ms(-2);
+}
+
+blockquote p:first-of-type:before {
+    content: "";
+}
+
+blockquote p:last-of-type:after {
+    content: "";
+}
+
+blockquote p {
+  margin: 0;
+  margin-bottom: ms(4);
+
+  &:last-of-type {
+      margin-bottom: 0;
+  }
+}
+
+// pre figure, pre figure pre {
+//   margin: 0;
+//   padding: 0;
+// }
+
+.highlight {
+  margin: 0;
+
+  pre {
+    padding: ms(2);
+  }
+}

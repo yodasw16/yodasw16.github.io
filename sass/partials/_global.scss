@@ -6,9 +6,18 @@ body {
     padding: 0 .5em;
 }
 
+a {
+    color: $red;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        text-decoration: underline;
+    }
+}
+
 .logo {
     width: 6em;
-    margin: 0 auto;
+    margin: ms(2) auto ms(7);
     display: block;
 }
 
@@ -62,7 +71,7 @@ body {
 }
 
 .hearts {
-    margin-bottom: ms(1);
+    margin-bottom: ms(5);
 }
 
 .hearts:after {
@@ -70,7 +79,7 @@ body {
     display: block;
     text-align: center;
     color: #de4e43;
-    margin-top: ms(1);
+    margin-top: ms(5);
     font-size: ms(1);
 }
 
@@ -150,31 +159,17 @@ main {
     color: $blue;
 }
 
+.nav--pagination {
+    text-align: center;
+    word-spacing: -.75em;
+}
+
 .nav--pagination .current {
     font-weight: bold;
 }
 
-.mbn {
-    margin-bottom: 0 !important;
-}
-
-blockquote {
-  background: $white;
-  border-left: 10px solid $yellow;
-  padding: ms(-2);
-}
-
-blockquote p:first-of-type:before {
-    content: "";
-}
-
-blockquote p:last-of-type:after {
-    content: "";
-}
-
-.inline-code {
+.inline-code, .highlighter-rouge {
     font-family: monospace;
-    font-size: ms(-1);
-    padding: ms(-4);
+    padding: ms(-9);
     background-color: $light-blue;
 }

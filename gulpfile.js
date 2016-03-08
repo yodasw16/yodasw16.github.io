@@ -43,15 +43,15 @@ gulp.task('styles', function() {
       cascade: false
     }))
     .pipe(plugins.minifyCss())
-    .pipe(gulp.dest('_site/styles/'))
+    .pipe(gulp.dest('_site/css/'))
     .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('./styles/'));
+    .pipe(gulp.dest('./css/'));
 });
 
 // Watch task
 gulp.task('watch', function () {
-  gulp.watch('sass/**/*.scss',['styles']);
-  gulp.watch(['**/*.html', '**/*.md', '_config.yml'], ['jekyll-rebuild']);
+  gulp.watch('./sass/**/*.scss',['styles']);
+  gulp.watch(['./*.html', './_posts/*.md', './_includes/*.html', './_layouts/*.html', '_config.yml'], ['jekyll-rebuild']);
 });
 
 // Default task
