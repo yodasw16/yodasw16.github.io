@@ -57,7 +57,7 @@ Taking this a step further, you still have to be careful not to write the select
 
 Content should almost never be location dependent. If I like the look of the heading style in my cards and I want to use the same style in a product list, I should be able to do it without writing any new CSS. I should be able to just drop the same class on the heading in my product list and have the same style. Unfortunately, giving BEM style names to our content (in the example above: `h2`,`a`,`p`,`img`) ties it to this component. This connection may only be symbolic since you could easily use the same class inside another component (as long as you keep your selectors flat), but if you do, you are losing one of the biggest benefits of BEM.
 
-You should be able to essentially work out the HTML structure of a component just by looking at the selectors in you CSS. By giving the content component specific classes you are tying them to that component and making it impossible to work out the structure of the HTML. The CSS for this component would look like this:
+You should be able to essentially work out the HTML structure of a component just by looking at the selectors in your CSS. By giving the content component specific classes you are tying them to that component and making it impossible to work out the structure of the HTML. The CSS for this component would look like this:
 
 {% highlight css %}
 .card {...}
