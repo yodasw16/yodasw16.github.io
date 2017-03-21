@@ -1,0 +1,313 @@
+---
+layout: slides
+title:  "Talks: DPL Sneak Peek"
+---
+<section>
+    <h2>New DPL Sneak Peek</h2>
+
+    <aside class="notes">
+        A few UI Engineers and UX Designers have been working on a new version of the DPL.
+    </aside>
+</section>
+
+<section>
+    <h2>Current DPL</h2>
+    <small><a href="https://git/pages/ProductDesign/ql-digital-pattern-library/">The soon to be deprecated DPL</a></small><br>
+
+    <ul>
+        <li class="fragment">Design recommendations</li>
+        <li class="fragment">Basic patterns</li>
+        <li class="fragment">No code</li>
+        <li class="fragment">Very little real guidance</li>
+    </ul>
+
+    <aside class="notes">
+        <p>Most of you are probably aware of the current DPL. Good first step. Served it's purpose as a design recommendation for the basic patterns most apps uses. Failed to provide actual implementation details and had very little guidance on how and when to use each pattern.</p>
+    </aside>
+</section>
+
+<section>
+    <img width="400" src="/img/talks/dpl-sneak-peek/good-news.gif">
+
+    <h2 class="fragment">A new DPL is coming!</h2>
+    <small class="fragment"><a href="https://git/pages/productdesign/dpl-drizzle/">The Alpha version of the new DPL</a></small><br>
+
+    <ul>
+        <li class="fragment">New pattern designs</li>
+        <li class="fragment">More complex patterns</li>
+        <li class="fragment">Code recommendations</li>
+        <li class="fragment">Lots of documentation</li>
+    </ul>
+
+    <aside class="notes">
+        <p>Good news! The UX team audited the current DPL and have updated and clarified what we currently have. We are going to be adding more patterns beyond just the basic elements. We're adding implementation guidance. And we'll had much more documentation around how and when to use patterns, what not to do with certain patterns, accessibility guidelines, and anything else we can think to document.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Not just a pattern library anymore.</h2>
+    <br><br>
+    <h2 class="fragment">It's a Design System!</h2>
+    <br>
+
+    <ul>
+        <li class="fragment">Code decisions</li>
+        <li class="fragment">System and tooling</li>
+        <li class="fragment">Process</li>
+        <li class="fragment">Future</li>
+    </ul>
+
+    <aside class="notes">
+        <p>A pattern library is a project. Design system is not a project. A product serving products. Projects get abandoned, a design system has a roadmap and backlog and requires dedication and buy-in. It has deliverables which I'll cover later, but a design system is also the people and process around those deliverables.</p>
+        <p>Today I will touch on a bunch of the things that this design system will include, but I want to focus on these things.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Code</h2>
+    <img src="/img/talks/dpl-sneak-peek/code.png">
+
+</section>
+
+<section>
+    <h2>CSS Class Syntax</h2>
+
+    <pre class="fragment"><code style="padding: 1em .5em;" data-trim>
+        .globalnamespace-classnamespace-ComponentName__element-name--modifier-name
+    </code></pre>
+
+    <pre class="fragment"><code style="padding: 1em .5em;" data-trim>
+        .dpl-c-PromoBoard__image--reversed
+    </code></pre>
+
+    <small class="fragment"><a href="http://bradfrost.com/blog/post/css-architecture-for-design-systems/">I'm not crazy! Other people, like Brad Frost, have come up with similar ideas.</a></small>
+    <br><br>
+
+    <h3 class="fragment">Global Namespace</h3>
+    <p class="fragment">Isolates DPL styles from application specific styles to avoid conflicts.</p>
+
+    <aside class="notes">
+
+    </aside>
+
+</section>
+
+<section>
+    <h2>Class Type Namespace</h2>
+    <small class="fragment"><a href="https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">More info from Harry Roberts at csswizardry.com</a></small>
+
+    <ul>
+        <li class="fragment">`o-`: <b>Object</b>. Used in any number of unrelated contexts to the one you can currently see it in. Dangerous to change css.</li>
+        <li class="fragment">`c-`: <b>Component</b>. Implementation-specific piece of UI. Safe to change css.</li>
+        <li class="fragment">`u-`: <b>Utility</b>. Highly specific. Highly reusable. Usually single purpose. High specificity.</li>
+        <li class="fragment">`is-`, `has-`: <b>State</b>. Temporary, optional, short-lived. Usually applied or changed with JS.</li>
+        <li class="fragment">`js-`: <b>Javascript behavior</b>. Signifies that JavaScript is bound to it. No CSS should be tied to these.</li>
+    </ul>
+
+    <aside class="notes">
+      <p>Provides clarity and confidence in what the purpose of the class is and how safe tehy are to change.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Component Name</h2>
+    <small class="fragment"><a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md#components">You can blame Nicolas Gallagher and SUITCSS for this</a></small><br>
+
+    <ul>
+        <li class="fragment">PascalCase</li>
+        <li class="fragment">Makes the component name <br>stand out from things around it.</li>
+        <li class="fragment">Aligns with  how people write <br>constructors and classes in JS.</li>
+    </ul>
+
+    <aside class="notes">
+
+    </aside>
+</section>
+
+<section>
+    <h2>BEM</h2>
+    <small><a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">More Harry Roberts explaining things good</a></small><br>
+
+    <video loop autoplay name="media"><source src="https://video.twimg.com/tweet_video/C3sBWwOVMAA4-9w.mp4" type="video/mp4"></video>
+
+    <aside class="notes">
+        <p>The rest of the class name uses BEM, which I'm not going to get into.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>ITCSS</h2>
+    <img src="/img/talks/dpl-sneak-peek/itcss.jpg">
+    <small><a href="http://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528">It's like Harry Roberts knows what he's talking about</a></small><br>
+
+    <aside class="notes">
+
+    </aside>
+</section>
+
+<section>
+    <h2>ITCSS</h2>
+
+    <ul>
+        <li class="fragment"><b>Settings</b>: Global stuff. Variables, colors, grid settings, etc. <em>No CSS</em></li>
+        <li class="fragment"><b>Tools</b>: Global Mixins and Functions <em>No CSS</em></li>
+        <li class="fragment"><b>Generic</b>: High level, far-reaching styles. Normalize, box-sizing, resets, etc. <em>Rarely modified</em>.</li>
+        <li class="fragment"><b>Base/Elements</b>: Unclassed html elements. What do things look like without classes?</li>
+        <li class="fragment"><b>Objects</b>: Highly reusable, abstract, design-free, mostly layout-driven styles. Think OOCSS objects like the Media Object. Shouldn't really be changed much because they could affect many things.</li>
+        <li class="fragment"><b>Components</b>: Recognizable pieces of the UI. Safe to change their CSS.</li>
+        <li class="fragment"><b>Utilities</b>: Highest specificity layer. Helper classes, overrides, etc. Often use !important here to make sure they really have the highest specificity.</li>
+    </ul>
+
+    <aside class="notes">
+
+    </aside>
+</section>
+
+<section>
+    <h2>No JavaScript!</h2>
+    <img class="fragment" src="/img/talks/dpl-sneak-peek/fake-news.jpg">
+
+    <aside class="notes">
+        <p>Last code decision topic. Some of you will assume this is just proof that I hate JavaScript. Fake News!</p>
+
+        <p>Reality is that this is just not feesible right now. There are too many ways that applications use JavaScript at QL. React, Angular, jQuery, whatever. I would like to eventually implement patterns in a few popular frameworks, but not on the table yet.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>System and Tooling</h2>
+
+    <ul>
+        <li class="fragment">Built on to of <a href="https://github.com/ScalesCSS/scales">Scales CSS</a></li>
+        <li class="fragment">Scales DPL Theme</li>
+        <li class="fragment">Drizzle</li>
+    </ul>
+
+    <aside class="notes">
+        <p>Basically built as a theme on top of Scales. The Scales DPL theme lives in its own repo so that it can be consumed by any application via NPM. Even the tool that the pattern library is built on just consumes the theme.</p>
+        <p>Drizzle is basically a static site generator for pattern libraries. It uses handlebars to make writing new patterns and variations easy. Uses frontmatter from Jekyll to allow for a bunch of meta data on a patterns that's displayed with the pattern.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Process</h2>
+
+    <ul>
+        <li class="fragment">Add new pattern HTML and CSS in Drizzle.</li>
+        <li class="fragment">Open a PR in Github Enterprise.</li>
+        <li class="fragment">Code review and changes</li>
+        <li class="fragment">Merge into master as In Progress</li>
+        <li class="fragment">Once tested and proved out, move the styles from Drizzle to the Scales DPL Theme.</li>
+        <li class="fragment">Some sort of version/tag/release process that doesn't currently exist.</li>
+    </ul>
+
+    <aside class="notes">
+        <p>Really is no process yet. Still being worked out. In general though, this is the process to follow if you want to contribute.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Future Features and Ideas</h2>
+
+    <ul>
+        <li class="fragment">New name and branding</li>
+        <li class="fragment">Make Public/open source</li>
+        <li class="fragment">Design/Dev principles</li>
+        <li class="fragment">Design/UX Guidelines</li>
+        <li class="fragment">Accessibility build in</li>
+        <li class="fragment">Illustrator/Sketch toolkit</li>
+        <li class="fragment">Simplified prototyping theme</li>
+        <li class="fragment">Product themes</li>
+        <li class="fragment">New project generator</li>
+        <li class="fragment">In browser prototyping</li>
+        <li class="fragment">JS implementations</li>
+        <li class="fragment">Design Tokens</li>
+        <li class="fragment">Design API</li>
+    </ul>
+
+    <aside class="notes">
+        <p>So many ideas! Some of these are already on the roadmap, some are just things I think we should be doing.</p>
+        <p>Design tokens: source of truth for "red lines". Things like colors, size and spacing values, font sizes, etc.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Design API</h2>
+
+    <pre><code style="padding: 1em;" data-trim>
+<% embed "notification.twig"
+  with {
+    "modifier_classes": [
+      "c-Notification--alert"
+    ],
+    "icon": "alert",
+    "text": "This is an important alert!",
+    "dismissable": true,
+    "cta": false
+  }
+%>
+    </code></pre>
+
+    <aside class="notes">
+        <p>Rough idea that I haven't completely thought out. If you are interested in this sort of thing, let's talk!</p>
+        <p>Want to be able to have any app consume the DPL and use the components without having to copy and past HTML in and update them every time changes are made. The DPL maybe provides some JSON modeling what the component is, all of it's properties. Then you can set the properties that you want in this instance and it just pulls in the html from the DPL with your properties.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>That's a lot to get done!</h2>
+    <img src="/img/talks/dpl-sneak-peek/weekends.gif">
+
+</section>
+
+<section>
+    <h2>Design Systems Team</h2>
+    <h3 class="fragment">To start</h3>
+
+    <ul>
+        <li class="fragment">A Design and UI Engineering lead plus at least another engineer, maybe an additional designer.</li>
+        <li class="fragment">Focused on execution and building a stable product and process.</li>
+        <ul class="fragment">
+            <li>Pattern library</li>
+            <li>CSS Framework</li>
+            <li>UI Toolkits</li>
+            <li>Guidelines/Principles</li>
+            <li>Accessibility</li>
+            <li>That big list from before</li>
+        </ul>
+    </ul>
+
+    <aside class="notes">
+        <p>This is a lot to get done. If we want to treat this thing as a product, it needs a dedicated team. What does this team do?</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Design Systems Team</h2>
+    <h3>In the future</h3>
+
+    <ul>
+        <li class="fragment">Sofware engineering, UX Specialists, DesignOps</li>
+        <li class="fragment">Focused on collecting and curating, distribution, education, quality, promotion, etc.</li>
+    </ul>
+
+    <aside class="notes">
+        <p>Add software engineer focused on the tools and apis around the system. Add UX specialists to do user research on new patterns.</p>
+        <p>DesignOps: Focused on removing inneficiencies between the system and engineers using it. Deployment, versioning, upgrade paths, performance, testing, etc.</p>
+        <p>Once product is stable role changes. The team becomes librarians. Obviously still doingdesigning and building patterns and components, but shifting a lot of that outside of the team.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Design System Contributors</h2>
+    <img width="400" class="fragment" src="/img/talks/dpl-sneak-peek/team.png">
+
+    <aside class="notes">
+        <p>Mentioned the process of getting code into the DPL and the centralized team that would own the system. But where do product teams fit into this? Just submitting code sometimes or is there more to it?</p>
+        <p>The centralized team can't do everything I've brought up so a larger virtual team is very important. This team is made up of everyone in the organization that is interested in using the system and growing it. It should involve contributions both internally to the system and externally as well as pairing between the design system team and people building our products.</p>
+    </aside>
+</section>
+
+<section>
+    <h2>Questions?</h2>
+</section>
