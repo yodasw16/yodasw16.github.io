@@ -12,3 +12,5 @@ If you really want to get weird, I restored all of the posts I could recover fro
 [https://yodasw16xanga.wordpress.com](https://yodasw16xanga.wordpress.com/)
 
 Have fun!
+
+This article was cross-posted to [Medium.com](https://medium.com/@yodasw16/blog-recovery-finally-b6ff50d61a95). Leave me a comment over there.
