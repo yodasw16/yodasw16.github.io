@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Blog recovery, finally"
-date:   2016-07-24 21:20:00
+date:   2017-07-24 21:20:00
 ---
 I mentioned in [this post](/2013/12/07/a-simple-new-blog.html) that I would eventually move all of the old posts that I thought I had lost from my original blog to this one. Well, 4 years later I finally did it!
 
