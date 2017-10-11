@@ -16,3 +16,6 @@ github:
 
 # Exclude
 exclude: [node_modules, sass, package.json, gulpfile.js]
+
+jekyll-crosspost_to_medium:
+  text: '<p>This article was originally posted on <a href="{{ url }}" rel="canonical">davidgillhespy.com</a>.</p>'
