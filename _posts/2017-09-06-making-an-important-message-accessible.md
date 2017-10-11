@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Making an important message accessible"
-date:   2017-10-11 16:00:00
+date:   2017-10-10 16:30:00
 crosspost_to_medium: true
 ---
 
