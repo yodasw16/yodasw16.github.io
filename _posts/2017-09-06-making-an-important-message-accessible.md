@@ -39,3 +39,5 @@ We can use the "region" landmark on our important message along with "aria-label
 I like this solution, but it's not perfect. I would rather be able to use "alert" which is supposed to read the contents right after it reads the page title, but the lack of support means I need something else.
 
 This solution makes it easily available without being annoying. If you can think of another solution, I'd love to hear about it!
+
+This article was cross-posted to [Medium.com](https://medium.com/@yodasw16/making-an-important-message-accessible-f21b45e6c7e8). Leave me a comment over there.
