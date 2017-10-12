@@ -12,7 +12,7 @@ Drawing a user's attention without annoying them (no alerts, modals, etc.) is fa
 So how do we make a message stand out for someone who can't see all of our smart design decisions? This question came up recently at work when my teammate [Rob](https://medium.com/@roblcopeland) asked me if there was an Aria role for an important message.
 
 ## First things, first
-Screen readers, like browsers, don't always follow the spec perfectly might behave differently. For this reason, ordering content in a meaningful way and using semantic markup should be your first concern. This ensures that a user can move through your document in a way that makes sense, even if an accessibility feature isn't functioning as expected.
+Screen readers, like browsers, don't always follow the spec perfectly and might behave differently. For this reason, ordering content in a meaningful way and using semantic markup should be your first concern. This ensures that a user can move through your document in a way that makes sense, even if an accessibility feature isn't functioning as expected.
 
 ## Aria "alert"?
 
@@ -33,6 +33,14 @@ The "[region](https://www.w3.org/TR/wai-aria-practices/examples/landmarks/region
 We can use the "region" landmark on our important message along with "aria-label" to provide the text that will show up in the landmark menu. Now, if our user is navigating the page with landmarks they will see that there is something important for them to read. On a Mac using VoiceOver it looks like this:
 
 <img src="/img/posts/landmark.png" alt="A screenshot of the landmark navigation menu on a Mac using VoiceOver">
+
+Here is a sample of the code you could use:
+
+{% highlight html %}
+<div role="region" aria-label="Important Information">
+  This is important information!
+</div>
+{% endhighlight %}
 
 ## Best solution?
 
