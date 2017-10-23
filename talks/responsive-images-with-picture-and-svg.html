@@ -4,7 +4,11 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 ---
 <section>
     <h1>Responsive Images</h1>
-    <h2>Using SVG, Picture, and other techniques to make sites faster</h2>
+    <h2 class="subhead">Using SVG, &lt;picture&gt;, and other<br>techniques to make sites faster</h2>
+
+    <aside class="notes">
+        I'm Dave Gillhespy, UI Architect on the UX team. Today we are going to talk about responsive images using SVG, the picture element, and other techniques to make our sites faster while having greater creative control.
+    </aside>
 </section>
 
 <section>
@@ -12,81 +16,130 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img src="/img/talks/responsive-images/fat.jpg">
 
     <aside class="notes">
-        well, not this kind of fat
+        We have a problem. We're getting fat. Not this kind of fat.
     </aside>
 </section>
 
 <section>
     <h2>Web pages are getting huge!</h2>
     <ul>
-        <li class="fragment">Average webpage weight is 1.8mb</li>
-        <li class="fragment">Up ~17% from last year and ~44% since 2012</li>
-        <li class="fragment">1.1mb of this is images<br>
+        <li class="fragment">Average webpage weight is ~3.4mb (~$0.20 USD)</li>
+        <li class="fragment">Up ~30% from last year and ~80% since 2014</li>
+        <li class="fragment">1.8mb of this is images  (~$0.11 USD)<br>
             <img style="margin: 10px auto; display: block" width="500" src="/img/talks/responsive-images/avg-bytes.png">
-            <cite class="cite">- httparchive.org</cite>
+            <cite class="cite">- <a href="http://httparchive.org/interesting.php?a=All&l=Oct%201%202017">httparchive.org</a> (Oct. 1, 2017)</cite>
+            <cite class="cite">- <a href="https://whatdoesmysitecost.com/">whatdoesmysitecost.com</a></cite>
         </li>
     </ul>
-</section>
-
-<section>
-    <h2>This isn't us though, right?</h2>
-    <h4 class="fragment">Well...</h4>
-
     <aside class="notes">
-        Our sites aren't can't be that big, right?
+        Page weights like this not only slow our sites down, they cost our clients money, especially on mobile, by using up their data.
     </aside>
 </section>
 
 <section>
-    <h2>Quicken Loans</h2>
-    <div class="fragment">
-        <img width="250" src="/img/talks/responsive-images/ql-bytes.png">
-        <p>&gt; 2mb</p>
-    </div>
-    <div class="fragment">
-        <img width="350" src="/img/talks/responsive-images/ql-img-weight.png">
-        <p>&gt; 1mb</p>
-        <cite class="cite">- webpagetest.org</cite>
-    </div>
-
-    <aside class="notes">
-        Let's talk about quickenloans.com. I don't want to pick on the venture folks here since they got picked on a lot last time, but ql.com is our biggest site and has the most room for improvement, so it makes for a great example.
-    </aside>
-</section>
-
-<section>
-    <h2>Agent Insight</h2>
+    <h2>Amazon</h2>
     <div class="fragment">
         <div style="width: 45%; float:left">
             <p>Large Screen</p>
-            <img width="250" src="/img/talks/responsive-images/ai-bytes-large.png">
-            <p>~2.5mb</p>
+            <img width="250" src="/img/talks/responsive-images/am-d-load.png">
+            <p>~5.9mb</p>
         </div>
         <div style="width: 45%; float:right">
             <p>Small Screen</p>
-            <img width="250" src="/img/talks/responsive-images/ai-bytes-small.png">
-            <p>~2.2mb</p>
+            <img width="250" src="/img/talks/responsive-images/am-m-load.png">
+            <p>~4.4mb</p>
         </div>
     </div>
     <div class="fragment" style="clear: left;">
         <div style="width: 45%; float:left">
-            <img width="250" src="/img/talks/responsive-images/ai-img-weight-large.png">
-            <p>&gt; 1.5mb</p>
+            <img width="250" src="/img/talks/responsive-images/am-d-pie.png">
+            <p>&gt; 4.6mb</p>
         </div>
         <div style="width: 45%; float:right">
-            <img width="250" src="/img/talks/responsive-images/ai-img-weight-small.png">
-            <p>&gt; 1.5mb</p>
+            <img width="250" src="/img/talks/responsive-images/am-m-pie.png">
+            <p>&gt; 1.7mb</p>
         </div>
-        <cite class="cite" style="clear: left;">- webpagetest.org</cite>
+        <cite class="cite" style="clear: both;">- webpagetest.org (<a href="https://www.webpagetest.org/result/171018_TR_8b0b40a532d8de19869eb9bf2a74f904/">desktop</a>, <a href="https://www.webpagetest.org/result/171018_AP_dc614a9a90df6c7794600bd21302e8f1/">mobile</a>)</cite>
     </div>
 
     <aside class="notes">
-        Another good example is Agent Insight, which is a responsive site with a  decent amount of images being used. Again, lots of room for improvement.
+        Let's take a look at some popular sites.
     </aside>
 </section>
 
 <section>
-    <h2>This is a <i><u>real</u></i> problem</h2>
+    <h2>Etsy</h2>
+    <div class="fragment">
+        <div style="width: 45%; float:left">
+            <p>Large Screen</p>
+            <img width="250" src="/img/talks/responsive-images/et-d-load.png">
+            <p>~7.5mb</p>
+        </div>
+        <div style="width: 45%; float:right">
+            <p>Small Screen</p>
+            <img width="250" src="/img/talks/responsive-images/et-m-load.png">
+            <p>~6.5mb</p>
+        </div>
+    </div>
+    <div class="fragment" style="clear: left;">
+        <div style="width: 45%; float:left">
+            <img width="250" src="/img/talks/responsive-images/et-d-pie.png">
+            <p>&gt; 2.1mb</p>
+        </div>
+        <div style="width: 45%; float:right">
+            <img width="250" src="/img/talks/responsive-images/et-m-pie.png">
+            <p>&gt; 6.2mb</p>
+        </div>
+        <cite class="cite" style="clear: both;">- webpagetest.org (<a href="https://www.webpagetest.org/result/171018_Q8_c87136d367e0709ddd6178aae62709ac/">desktop</a>, <a href="https://www.webpagetest.org/result/171018_JJ_f64c0efd79fbfb40c344b439beb7220c/">mobile</a>)</cite>
+    </div>
+
+    <aside class="notes">
+        Let's take a look at some popular sites.
+    </aside>
+</section>
+
+<section>
+    <h2>This isn't us though, right?</h2>
+    <h4 class="fragment"><em>Well...</em></h4>
+
+    <aside class="notes">
+        Our sites are ok, right?
+    </aside>
+</section>
+
+<section>
+    <h2>Quickenloans.com</h2>
+    <div class="fragment">
+        <div style="width: 45%; float:left">
+            <p>Large Screen</p>
+            <img width="250" src="/img/talks/responsive-images/ql-d-load.png">
+            <p>~1.7mb</p>
+        </div>
+        <div style="width: 45%; float:right">
+            <p>Small Screen</p>
+            <img width="250" src="/img/talks/responsive-images/ql-m-load.png">
+            <p>~1.8mb</p>
+        </div>
+    </div>
+    <div class="fragment" style="clear: left;">
+        <div style="width: 45%; float:left">
+            <img width="250" src="/img/talks/responsive-images/ql-d-pie.png">
+            <p>&gt; 0.6mb</p>
+        </div>
+        <div style="width: 45%; float:right">
+            <img width="250" src="/img/talks/responsive-images/ql-m-pie.png">
+            <p>&gt; 0.6mb</p>
+        </div>
+        <cite class="cite" style="clear: both;">- webpagetest.org (<a href="https://www.webpagetest.org/result/171018_KV_c784cad87c5821b4114f3780ef85a93e/">desktop</a>, <a href="https://www.webpagetest.org/result/171018_63_1445ac9509377c9c411b49e3e9aafde0/">mobile</a>)</cite>
+    </div>
+
+    <aside class="notes">
+        Let's take a look at quickenloans.com. Clearly we are doing better than amazon and etsy, but images are still taking up a significant % of the total page weight. One thing I want you to notice here that I am going to come back to later is that the number of bytes for images is basically the same on desktop and mobile. I'll get into that more later.
+    </aside>
+</section>
+
+<section>
+    <h2>This is a <em>real</em> problem</h2>
     <div class="fragment">
         <img width="500" src="/img/talks/responsive-images/it-gets-better.gif">
     </div>
@@ -97,9 +150,9 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 
 <section>
     <h2>Actually, it doesn't</h2>
-    <img width="500" src="/img/talks/responsive-images/sorry.gif">
+    <img width="500" src="/img/talks/responsive-images/lifesucks.gif">
     <div class="fragment">
-        <p>RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA RETINA</p>
+        <p style="font-family: brandon-grotesque; font-weight: bold; font-size: 4em;">RETINA</p>
     </div>
     <aside class="notes">
         Before it gets better, it actually gets worse. We already have a weight problem. Now we also have to worry about providing higher resolution images to devices that support them. We have more pixels to deal with so our images have to get larger to fill the available space.
@@ -108,7 +161,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 
 <section>
     <h2>We can handle it!</h2>
-    <img width="500" src="/img/talks/responsive-images/hit-with-knowledge.gif">
+    <img width="500" src="/img/talks/responsive-images/fixit.gif">
     <aside class="notes">
         The good news is that there are techniques and tools available to help us deliver the right images to the right browsers while keeping our file size low.
     </aside>
@@ -153,56 +206,46 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 <section>
     <h2>SVG for icons</h2>
     <p class="fragment"><a href="http://css-tricks.com/svg-symbol-good-choice-icons/">SVG `symbol` a Good Choice for Icons</a></p>
-    <img class="fragment" width="700" src="/img/talks/responsive-images/svgicons1.png">
+    <img class="fragment" src="/img/talks/responsive-images/svg1.png">
+    <img class="fragment" src="/img/talks/responsive-images/svg2.png">
 
     <aside class="notes">
         My favorite use of SVG is for icons. We all got pretty hyped on icon fonts for a while because they offered a nice scalable alternative to sprited PNGs. A lot of performance and accessibility issues began to be realized so many people have moved to using svg instead. Chris Coyier posted a really great article with a system that I would recommend using. It works like this. SVG paths usually go in `g` element, instead we use `symbol`. This allows us to set the viewbox, which controlls the positioning of the icon in the svg file instead of in our markup.
-    </aside>
-</section>
 
-<section>
-    <h2>SVG for icons</h2>
-    <p><a href="http://css-tricks.com/svg-symbol-good-choice-icons/">SVG `symbol` a Good Choice for Icons</a></p>
-    <img width="700" src="/img/talks/responsive-images/svgicons2.png">
-
-    <aside class="notes">
         Now you can easily drop in an icon with an inline svg element. You can then add a class and control the size or color or whatever.
     </aside>
 </section>
 
 <section>
     <h2>SVG for icons</h2>
-    <div class="fragment">
+    <div class="">
         <h3>Tools for automating</h3>
-        <ul>
-            <li><a href="https://github.com/Hiswe/gulp-svg-symbols">Gulp SVG Symbols</a></li>
-            <li><a href="https://github.com/FWeinb/grunt-svgstore">Grunt SVG Store</a></li>
-        </ul>
-    </div>
-    <div style="margin-left: -5em" class="fragment">
-        <h3>Other systems</h3>
-        <ul style="margin-left: 3em">
-            <li><a href="https://github.com/filamentgroup/grunticon">Grunticon</a></li>
-            <li><a href="https://github.com/gavro/gulp-iconify">Gulp Iconify</a></li>
+        <ul style="margin-left: 3.1em;">
+            <li><a href="https://github.com/svgstore/svgstore">SVG Store</a></li>
+            <li><a href="https://github.com/kisenka/svg-sprite-loader">Webpack SVG Sprite Loader</a></li>
+        </ul><br><br>
+        <h3 style="margin-left: -4.6em;">IE Issues</h3>
+        <ul style="margin-left: 7em;">
+            <li><a href="https://github.com/jonathantneal/svg4everybody">svg4everybody</a></li>
+            <li><a href="https://css-tricks.com/ajaxing-svg-sprite/">Ajax SVG Sprite</a></li>
+            <li>Include SVG directly in the document</li>
         </ul>
     </div>
     <aside class="notes">
-        Of course there are tools available for automating this stuff! Alternatively systems like Grunticon and Gulp Iconify are pretty popular ways to handle making SVG icons as background images with png fallbacks.
+        Of course there are tools available for automating this stuff! One thing to note is referenceing an external file with the use element doesn't work in any version of IE. If that is a concern, there are options.
     </aside>
 </section>
 
 <section>
     <h2>Other SVG stuff</h2>
     <h3>Optimization</h3>
-    <ul class="fragment">
-        <li><a href="https://github.com/sindresorhus/grunt-svgmin">Grunt SVGmin</a></li>
-        <li><a href="https://github.com/ben-eb/gulp-svgmin">Gulp SVGmin</a></li>
-            <li><a href="https://github.com/gruntjs/grunt-contrib-imagemin">Grunt ImageMin</a></li>
-            <li><a href="https://github.com/sindresorhus/gulp-imagemin">Gulp ImageMin</a></li>
+    <ul class="">
+        <li><a href="https://github.com/svg/svgo">SVGO</a></li>
+        <li><a href="https://github.com/imagemin/imagemin">imagemin</a></li>
     </ul>
 
     <aside class="notes">
-        Since SVG is just code, you can manually remove all the garbage, but who wants to do that? You can automate this stuff with SVGmin. There's also ImageMin, which includes the same SVGO optimizer that SVGmin uses, but it also covers png, jpg, and gif files.
+        Since SVG is just code, you can manually remove all the garbage, but who wants to do that? You can automate this stuff with SVGO. There's also ImageMin, which provides SVGO and other image format optimization plugins. There are versions of these available for whatever build tools you use.
     </aside>
 </section>
 
@@ -216,13 +259,13 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     </div>
 
     <aside class="notes">
-        Browser support for basic SVG is actually really awesome. IE9+, all versions of the other major browsers, android 4+. Of course, that comes with some gotchas. I'm not going to go into them, but Chris Coyier put together a nice roundup of all the issues. Mostly related to advanced features like filters.
+        Browser support for basic SVG is awesome. IE9+, all versions of the other major browsers, android 4+. Of course, that comes with some gotchas. I'm not going to go into them, but Chris Coyier put together a nice roundup of all the issues. Mostly related to advanced features like filters.
     </aside>
 </section>
 
 <section>
     <h2>Give me bitmaps or give me death!</h2>
-    <p>-Patrick Henry</p>
+    <p>-Patrick Henry<span class="fragment"> (probably)</span></p>
     <img src="/img/talks/responsive-images/patrickhenry.jpg">
 
     <aside class="notes">
@@ -233,12 +276,12 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 <section>
     <h2>Big images for everyone!</h2>
     <img src="/img/talks/responsive-images/fat.gif">
-    <p style="font-size: 5em;">72%</p>
+    <p style="font-size: 4em;">72%</p>
     <p>of responsive sites serve the same content to desktop &amp; mobile</p>
-    <cite class="cite">- guypo.com</cite>
+    <cite class="cite">- <a href="https://www.guypo.com/real-world-rwd-performance-take-2/">guypo.com</a></cite>
 
     <aside class="notes">
-        Unfortunetly for performance reason, we have been choosing loading the largest image all of the time. According to this study, 72% use the large image everywhere.
+        Unfortunetly for performance reason, we have been choosing loading the largest image all of the time. According to this study from Guy Podjarny, 72% use the large image everywhere.
     </aside>
 </section>
 
@@ -247,7 +290,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img class="fragment" src="/img/talks/responsive-images/yes-it-is.gif">
 
     <aside class="notes">
-        Wouldn't it be nice if we could specify several images sources and tell the browser when to use each one? Or even better, let the browser decide which one to deliver? And what if we could do this without using UI sniffing or some JS solution that could easily fail?
+        Wouldn't it be nice if we could specify several images sources and tell the browser when to use each one? Or even better, let the browser decide which one to deliver? And what if we could do this without using UI sniffing or some JS solution that could easily fail? Is such a thing possible? Yes it is!
     </aside>
 </section>
 
@@ -257,13 +300,13 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img class="fragment" src="/img/talks/responsive-images/ricg.png">
 
     <aside class="notes">
-        Developers have been looking for a solution to this problem for the last few years and started the Responsive Images Community Group through the W3C to address the problem.
+        Developers have been looking for a solution to this problem for the last few years and started the Responsive Images Community Group through the W3C to address the problem. They ended up landing on 3 techniques.
     </aside>
 </section>
 
 <section>
     <h2>Picture Element</h2>
-    <img class="fragment" src="/img/talks/responsive-images/picture1.png">
+    <img src="/img/talks/responsive-images/picture1.png">
 
     <aside class="notes">
         The first technique I want to talk about is the new picture element. Here's what it looks like at it's core. Just a picture element that wraps an image element. So it has a built in fallback for browsers that don't understand the new element.
@@ -284,7 +327,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img src="/img/talks/responsive-images/picture3.png">
 
     <aside class="notes">
-        Optionally, there is a type attribute that allows you to specify the type of image that gets used. For example, if you want to provide a WebP file, which is a new image format that has way better compression than jpeg or png. Since it is only supported by Chrome and Opera, you can't give this to everyone, but using picture, you can give the option and if the browser supports it, it will choose that image. Then any browser inthe future will just get that image automatically.
+        Optionally, there is a type attribute that allows you to specify the type of image that gets used. For example, if you want to provide a WebP file, which is a new image format that has way better compression than jpeg or png. Since it is only supported by Chrome and Opera, you can't give this to everyone, but using picture, you can give the option and if the browser supports it, it will choose that image. Then any browser in the future will just get that image automatically.
     </aside>
 </section>
 
@@ -293,7 +336,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img src="/img/talks/responsive-images/picture4.png">
 
     <aside class="notes">
-        What if you have a big image like this one form Nathan's hot dog eating contest? What happens when the screen gets smaller?
+        Let's talk about when it makes most sense to use picutre. Say you have a big image like this one from Nathan's hot dog eating contest? What happens when the screen gets smaller?
     </aside>
 </section>
 
@@ -303,7 +346,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img class="fragment" src="/img/talks/responsive-images/picture6.png">
 
     <aside class="notes">
-        The picture loses effectiveness and is harder to make out what's in it. What we'd like to do is crop that image so it looks better at a smaller size. This is called art direction, and it's really simple to do with the picture element. You just change the source of the smallest file to this nice cropped image and the browser will load it when you tell it to.
+        The picture loses effectiveness and is harder to make out what's in it. What we'd like to do is crop that image so it looks better at a smaller size. So when we want some art direction, it's really simple to do with the picture element. You just change the source of the smallest file to this nice cropped image and the browser will load it when you tell it to.
     </aside>
 </section>
 
@@ -313,7 +356,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img src="/img/talks/responsive-images/picture7.png">
 
     <aside class="notes">
-        This is a brand new spec so browser support is still catching up, but has suprisingly good support. Out of the box support is available in the latest chrome and opera and it is available in FF behind an experimental flag that you have to turn on. IE has it listed as Under Consideration. Only Safari has yet to say anything about upcoming support. Since there is a built in fallback to the img element, you're never going to not get anything. There are also polyfills available, but I'll touch on that later.
+        This browser support is really exciting. It shows just how fast browsers are moving when it comes to new features. At this point, only IE is a concern. Since there is a built in fallback to the img element, you're never going to not get anything. There are also polyfills available, but I'll touch on that later.
     </aside>
 </section>
 
@@ -321,6 +364,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <h2>Picture Element FTW!!</h2>
     <h3>Time to party</h3>
     <img src="/img/talks/responsive-images/time-to-party.gif">
+    <p class="fragment"><strong>Our Goal:</strong> To deliver the smallest possible file <span class="fragment" style="text-decoration: line-through">that fills up all of the available pixels</span></p>
 
     <aside class="notes">
         Since the picture element only has media queries, the screen width is the only factor that is getting looked at. This isn't really enough to meet our goal of delivering the smallest image that fills all of the pixels available.
@@ -337,7 +381,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     </ul>
 
     <aside class="notes">
-        Basically four things you need to know to determine the right image to download and display. How big is the screen? How dense is it, retina, 2x, 3x? How big is the image will be when it renders? If you're doing a 2 column layout, you only need the image to take up 50% of the viewport. Lastly need to know the actual image dimensions. For performance reasons, browsers are very agressive about prefetching assets, so you need to know all of this BEFORE the CSS gets parsed and before the images get downloaded. This is a really hard problem!
+        Basically four things you need to know to determine the right image to download and display. How big is the screen? How dense is it, retina, 2x, 3x? How big the image will be when it renders? If you're doing a 2 column layout, you only need the image to take up 50% of the viewport. Lastly need to know the actual image dimensions. For performance reasons, browsers are very agressive about prefetching assets, so you need to know all of this BEFORE the CSS gets parsed and before the images get downloaded. This is a really hard problem!
     </aside>
 </section>
 
@@ -392,7 +436,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 <section>
     <h2>Image Dimensions</h2>
     <h3>srcset</h3>
-    <img class="fragment" src="/img/talks/responsive-images/picture8.png">
+    <img src="/img/talks/responsive-images/srcset1.png">
 
     <aside class="notes">
         Let's start with srcset. This allows us to tell the browser the actual dimensions of the image we want it to load. It's a simple comma separated list of keys and values. The first part is the URL to the image and the second is the width of the image itself. This w syntax is a little weird, but it corresponds to the actual px width of the image you want used.
@@ -402,7 +446,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 <section>
     <h2>Rendered Size</h2>
     <h3>sizes</h3>
-    <img class="fragment" src="/img/talks/responsive-images/picture9.png">
+    <img src="/img/talks/responsive-images/sizes1.png">
 
     <aside class="notes">
         Next is sizes. Again it's just a list of comma separated keys and values. Basically you have a media query that says whenever I'm being rendered on a screen that's at least 1024px wide, the image is going to be 300px wide. You can use any css measurement to make this work. So at 640px the image is going to use 50% of the vertical width of the screen. The last value is the fallback. If none of these match, display at 100% of the vertical width of the screen. You can use px, em, vw, calc, whatever.
@@ -411,7 +455,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 
 <section>
     <h2>srcset &amp; sizes</h2>
-    <img class="fragment" src="/img/talks/responsive-images/picture10.png">
+    <img src="/img/talks/responsive-images/srcsetsizes1.png">
 
     <aside class="notes">
         Let's put these together. We have an image tag, srcset that defines the available images that can be downloaded. We have sizes that say how big the image is going to be at each breakpoint. Then we have the regular src as a fallback.
@@ -438,8 +482,9 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
 
 <section>
     <h2>Confused?</h2>
-    <img src="/img/talks/responsive-images/confused.gif"><br>
-    <img class="fragment" src="/img/talks/responsive-images/picture11.png">
+    <img src="/img/talks/responsive-images/confused.gif">
+    <p class="fragment"><a href="https://dev.opera.com/articles/responsive-images#changing-image-sizes-high-dpi-images-different-image-types--art-direction-use-case">So much power!</a></p>
+    <img class="fragment" src="/img/talks/responsive-images/rwdimagessimple.png">
 
     <aside class="notes">
         It's ok if you are confused. These features give a lot of power, so it takes actually trying to use them to really understand. [Show Crazy use case] The good news is that for most cases, this is really all you will need. You're providing the small image as the regular image source and your srcset simply gives a medium and large version of the image. Because typically you want an image to just take up all of the available space, we can leave sizes off and just let the default 100vw do it's thing.
@@ -452,7 +497,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <img src="/img/talks/responsive-images/picture12.png"><br>
 
     <aside class="notes">
-        Available in latest Chrome, Opera, and android, and it is available in FF behind an experimental flag. For Safari and ios srcset is available, but not sizes. IE has said that it is "under consideration". But remember, there are built in fallbacks so you don't really have to wait.
+        Basically the same browser support as picture. All the modern browsers have support. Again, IE is going to either require a pollyfill or remember, there are built in fallbacks so if you can make that work, you're done.
     </aside>
 </section>
 
@@ -462,7 +507,7 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <p><a href="https://github.com/scottjehl/picturefill">Picturefill</a></p>
 
     <aside class="notes">
-        If you want all of the features now there is a JS pollyfill available by Scott Jehl of the Fillament Group. As it gets implemented natively, you won't need it anymore.
+        Browser support is really good, but if you need it, there is a JS pollyfill available by Scott Jehl of the Fillament Group. As IE usage drops and Edge gets more popular, you won't need it anymore.
     </aside>
 </section>
 
@@ -470,9 +515,9 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <h2>Automating responsive images</h2>
     <h3>CMS plugins</h3>
     <ul>
-        <li><a href="https://github.com/tevko/wp-tevko-responsive-images">Wordpress Responsive Images</a></li>
-        <li><a href="https://www.drupal.org/project/resp_img">Drupal 8 core</a></li>
-        <li><a href="https://github.com/mattdsteele/jekyll-picture-tag">Jekyll Picture Tag</a></li>
+        <li><a href="https://www.smashingmagazine.com/2015/12/responsive-images-in-wordpress-core/">Responsive Images in Wordpress Core</a></li>
+        <li><a href="https://www.drupal.org/docs/8/mobile-guide/responsive-images-in-drupal-8">Responsive Images in Drupal 8</a></li>
+        <li><a href="https://github.com/wildlyinaccurate/jekyll-responsive-image">Jekyll Responsive Images</a></li>
     </ul>
 
     <aside class="notes">
@@ -484,30 +529,12 @@ title:  "Talks: Responsive Images: Using SVG, Picture, and other techniques to m
     <h2>Automating responsive images</h2>
     <h3>Build scripts</h3>
     <ul>
+        <li><a href="https://github.com/herrstucki/responsive-loader">Webpack Responsive Images Loader</a></li>
         <li><a href="https://github.com/mahnunchik/gulp-responsive">Gulp Responsive Images</a></li>
-        <li><a href="https://github.com/andismith/grunt-responsive-images">Grunt Responsive Images</a></li>
     </ul>
 
     <aside class="notes">
         There are also gulp and grunt plugins for automating this stuff.
-    </aside>
-</section>
-
-<section>
-    <h2>Optimizing images</h2>
-    <ul>
-        <li><a href="https://github.com/gruntjs/grunt-contrib-imagemin">Grunt ImageMin</a></li>
-        <li><a href="https://github.com/sindresorhus/gulp-imagemin">Gulp ImageMin</a></li>
-        <li><a href="https://github.com/somerandomdude/grunt-webp">Grunt WebP</a></li>
-        <li><a href="https://github.com/sindresorhus/gulp-webp">Gulp WebP</a></li>
-        <li><a href="https://tinypng.com/">Tiny PNG</a></li>
-        <li><a href="https://tinyjpg.com/">Tiny JPG</a></li>
-        <li><a href="https://github.com/heldr/grunt-smushit">Grunt Smushit</a></li>
-        <li><a href="https://github.com/heldr/gulp-smushit">Gulp Smushit</a></li>
-    </ul>
-
-    <aside class="notes">
-        Last thing I want to give some links for are ways to optimize the file size of your bitmap images. I mentioned the first 2 when I was talking about optimizing SVGs. Those are probably your best bet since it covers everything, but you might want to use other compression algorythims depending on the situation.
     </aside>
 </section>
 

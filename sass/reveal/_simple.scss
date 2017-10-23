@@ -15,13 +15,15 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$mainFont: "rooney-web-1","rooney-web-2", georgia, serif;
+$mainFont: rooney-web, georgia, serif;
 $mainColor: #333;
-$headingFont: "adelle-1","adelle-2", georgia, sans-serif;
+$headingFont: brandon-grotesque, sans-serif;
+$headingWeight: bold;
+$headingLetterSpacing: 0;
 $headingColor: #333;
 $headingTextShadow: none;
 $headingTextTransform: none;
-$headingLineHeight: 1.25;
+$headingLineHeight: 1.1;
 $backgroundColor: #faffff;
 $linkColor: #de4e43;
 $linkColorHover: #de0f00;
@@ -33,8 +35,16 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     font-size: 18px;
 }
 
-
+.subhead {
+  font-family: "freight-text-pro",serif !important;
+  font-size: 1.5em !important;
+}
 
 // Theme template ------------------------------
 @import "template/theme";
 // ---------------------------------------------
+
+.reveal pre code.codefix {
+  padding: 30px;
+  white-space: normal;
+}

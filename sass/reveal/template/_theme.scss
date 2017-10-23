@@ -37,6 +37,7 @@ body {
 	color: $headingColor;
 
 	font-family: $headingFont;
+	font-weight: $headingWeight;
 	line-height: $headingLineHeight;
 	letter-spacing: $headingLetterSpacing;
 
@@ -46,6 +47,7 @@ body {
 
 .reveal h1 {
 	text-shadow: $heading1TextShadow;
+	text-transform: uppercase;
 }
 
 
