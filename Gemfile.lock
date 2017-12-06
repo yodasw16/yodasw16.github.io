@@ -17,6 +17,7 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-crosspost-to-medium (0.1.14)
     jekyll-paginate (1.1.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
@@ -43,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  jekyll-crosspost-to-medium
   jekyll-paginate
 
 BUNDLED WITH
