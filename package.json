@@ -15,7 +15,7 @@
   "homepage": "https://github.com/yodasw16/yodasw16.github.io",
   "devDependencies": {
     "breakpoint-sass": "^2.6.1",
-    "browser-sync": "^2.10.1",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-load-plugins": "^1.1.0",
